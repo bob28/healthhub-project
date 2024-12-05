@@ -12,10 +12,11 @@ export default function NavbarComp() {
 
   // Replace # paths with your paths
   const navigation = [
+    { title: "Home", path: "/" },
     { title: "Patients", path: "/patients" },
-    { title: "Healthcare Providers", path: "#" },
-    { title: "Tests and Services", path: "#" },
-    { title: "About", path: "#" },
+    { title: "Healthcare Providers", path: "/providers" },
+    { title: "Our Tests", path: "/tests" },
+    { title: "About", path: "/about" },
   ];
 
   return (

@@ -1,0 +1,992 @@
+[
+  {
+    "id": "CBC001",
+    "name": "Complete Blood Count (CBC)",
+    "category": "Hematology",
+    "type": "Blood",
+    "description": "Measures different components of blood including red cells, white cells, and platelets",
+    "preparation": "No special preparation required. Fasting may be required if other tests are being done simultaneously.",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3-5 mL of blood"
+  },
+  {
+    "id": "COV001",
+    "name": "COVID-19 PCR Test",
+    "category": "Infectious Disease",
+    "type": "Nasopharyngeal Swab",
+    "description": "Detects genetic material of the SARS-CoV-2 virus",
+    "preparation": "No eating, drinking, smoking, or chewing gum for 30 minutes before the test",
+    "turnaroundTime": "24-48 hours",
+    "sampleRequired": "Nasopharyngeal swab"
+  },
+  {
+    "id": "LFT001",
+    "name": "Liver Function Test",
+    "category": "Clinical Chemistry",
+    "type": "Blood",
+    "description": "Measures various chemicals in the blood to evaluate liver function",
+    "preparation": "8-12 hours fasting required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "ECG001",
+    "name": "Electrocardiogram",
+    "category": "Cardiology",
+    "type": "Electrical Activity Recording",
+    "description": "Records electrical signals from the heart to check for various heart conditions",
+    "preparation": "Wear loose-fitting clothing, avoid applying lotions or oils to chest area",
+    "turnaroundTime": "Immediate",
+    "sampleRequired": "None - External leads placement"
+  },
+  {
+    "id": "URI001",
+    "name": "Urinalysis",
+    "category": "Clinical Chemistry",
+    "type": "Urine",
+    "description": "Analyzes physical, chemical, and microscopic properties of urine",
+    "preparation": "Clean catch, midstream sample required. First morning sample preferred",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "30-60 mL of urine"
+  },
+  {
+    "id": "TSH001",
+    "name": "Thyroid Stimulating Hormone",
+    "category": "Endocrinology",
+    "type": "Blood",
+    "description": "Measures thyroid stimulating hormone to assess thyroid function",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3-5 mL of blood"
+  },
+  {
+    "id": "CRP001",
+    "name": "C-Reactive Protein",
+    "category": "Immunology",
+    "type": "Blood",
+    "description": "Measures level of inflammation in the body",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3-5 mL of blood"
+  },
+  {
+    "id": "HBA001",
+    "name": "Hemoglobin A1C",
+    "category": "Clinical Chemistry",
+    "type": "Blood",
+    "description": "Measures average blood sugar levels over past 2-3 months",
+    "preparation": "No fasting required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "STR001",
+    "name": "Strep Throat Test",
+    "category": "Microbiology",
+    "type": "Throat Swab",
+    "description": "Detects presence of group A streptococcus bacteria",
+    "preparation": "No eating or drinking for 15 minutes before test",
+    "turnaroundTime": "15-30 minutes (rapid) or 24-48 hours (culture)",
+    "sampleRequired": "Throat swab"
+  },
+  {
+    "id": "CHO001",
+    "name": "Lipid Panel",
+    "category": "Clinical Chemistry",
+    "type": "Blood",
+    "description": "Measures cholesterol and triglyceride levels",
+    "preparation": "9-12 hours fasting required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "FER001",
+    "name": "Ferritin",
+    "category": "Hematology",
+    "type": "Blood",
+    "description": "Measures iron storage levels in the body",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "PSA001",
+    "name": "Prostate Specific Antigen",
+    "category": "Oncology",
+    "type": "Blood",
+    "description": "Screens for prostate cancer and other prostate conditions",
+    "preparation": "No ejaculation for 48 hours before test",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3-5 mL of blood"
+  },
+  {
+    "id": "XRY001",
+    "name": "Chest X-Ray",
+    "category": "Radiology",
+    "type": "Imaging",
+    "description": "Images of chest cavity to examine heart, lungs, and bones",
+    "preparation": "Remove jewelry and wear hospital gown",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Imaging procedure"
+  },
+  {
+    "id": "ULT001",
+    "name": "Abdominal Ultrasound",
+    "category": "Radiology",
+    "type": "Imaging",
+    "description": "Images of abdominal organs using sound waves",
+    "preparation": "6-8 hours fasting required, full bladder needed",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Imaging procedure"
+  },
+  {
+    "id": "VIT001",
+    "name": "Vitamin D",
+    "category": "Clinical Chemistry",
+    "type": "Blood",
+    "description": "Measures vitamin D levels in blood",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "2-3 days",
+    "sampleRequired": "3-5 mL of blood"
+  },
+  {
+    "id": "FBC001",
+    "name": "Fecal Blood Test",
+    "category": "Clinical Chemistry",
+    "type": "Stool",
+    "description": "Detects blood in stool sample",
+    "preparation": "Avoid certain foods and medications for 3 days before test",
+    "turnaroundTime": "1-3 days",
+    "sampleRequired": "Stool sample"
+  },
+  {
+    "id": "HIV001",
+    "name": "HIV Antibody/Antigen Test",
+    "category": "Infectious Disease",
+    "type": "Blood",
+    "description": "Screens for HIV infection",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "1-3 days",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "MRI001",
+    "name": "MRI Brain",
+    "category": "Radiology",
+    "type": "Imaging",
+    "description": "Detailed images of brain using magnetic fields",
+    "preparation": "Remove all metal objects, inform of any implants",
+    "turnaroundTime": "24-48 hours for results",
+    "sampleRequired": "None - Imaging procedure"
+  },
+  {
+    "id": "PTH001",
+    "name": "Parathyroid Hormone",
+    "category": "Endocrinology",
+    "type": "Blood",
+    "description": "Measures parathyroid hormone levels",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3-5 mL of blood"
+  },
+  {
+    "id": "HEP001",
+    "name": "Hepatitis Panel",
+    "category": "Infectious Disease",
+    "type": "Blood",
+    "description": "Screens for various types of hepatitis infections",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "2-3 days",
+    "sampleRequired": "5-7 mL of blood"
+  },
+  {
+    "id": "ALG001",
+    "name": "Allergy Panel",
+    "category": "Immunology",
+    "type": "Blood",
+    "description": "Tests for specific IgE antibodies to various allergens",
+    "preparation": "No antihistamines for 7 days before test",
+    "turnaroundTime": "3-5 days",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "SPR001",
+    "name": "Spirometry",
+    "category": "Pulmonology",
+    "type": "Breathing Test",
+    "description": "Measures lung function and capacity",
+    "preparation": "No smoking or heavy exercise 2 hours before test",
+    "turnaroundTime": "Immediate",
+    "sampleRequired": "None - Breathing into device"
+  },
+  {
+    "id": "CTS001",
+    "name": "CT Scan Abdomen",
+    "category": "Radiology",
+    "type": "Imaging",
+    "description": "Detailed cross-sectional images of abdomen",
+    "preparation": "4-6 hours fasting, contrast dye may be required",
+    "turnaroundTime": "24 hours for results",
+    "sampleRequired": "None - Imaging procedure"
+  },
+  {
+    "id": "FOL001",
+    "name": "Folic Acid Test",
+    "category": "Clinical Chemistry",
+    "type": "Blood",
+    "description": "Measures folic acid levels in blood",
+    "preparation": "8 hours fasting required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "CUL001",
+    "name": "Urine Culture",
+    "category": "Microbiology",
+    "type": "Urine",
+    "description": "Tests for presence of bacteria in urine",
+    "preparation": "Clean catch, midstream sample",
+    "turnaroundTime": "48-72 hours",
+    "sampleRequired": "30 mL of urine"
+  },
+  {
+    "id": "MAM001",
+    "name": "Mammogram",
+    "category": "Radiology",
+    "type": "Imaging",
+    "description": "X-ray imaging of breast tissue",
+    "preparation": "No deodorant, powder, or lotion on breast area",
+    "turnaroundTime": "1-2 days",
+    "sampleRequired": "None - Imaging procedure"
+  },
+  {
+    "id": "TES001",
+    "name": "Testosterone Level",
+    "category": "Endocrinology",
+    "type": "Blood",
+    "description": "Measures testosterone hormone levels",
+    "preparation": "Blood draw in morning, fasting preferred",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "PAP001",
+    "name": "Pap Smear",
+    "category": "Cytology",
+    "type": "Cervical Smear",
+    "description": "Screens for cervical cancer and abnormalities",
+    "preparation": "No intercourse or feminine products for 48 hours before test",
+    "turnaroundTime": "1-2 weeks",
+    "sampleRequired": "Cervical cell sample"
+  },
+  {
+    "id": "EEG001",
+    "name": "Electroencephalogram",
+    "category": "Neurology",
+    "type": "Electrical Activity Recording",
+    "description": "Records electrical activity of the brain",
+    "preparation": "Clean hair, no hair products, sleep-deprived if required",
+    "turnaroundTime": "2-3 days for results",
+    "sampleRequired": "None - External leads placement"
+  },
+  {
+    "id": "ANA001",
+    "name": "Antinuclear Antibody Test",
+    "category": "Immunology",
+    "type": "Blood",
+    "description": "Screens for autoimmune disorders",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "3-5 days",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "DEX001",
+    "name": "Dexamethasone Suppression Test",
+    "category": "Endocrinology",
+    "type": "Blood",
+    "description": "Evaluates cortisol production",
+    "preparation": "Take dexamethasone as prescribed, collect morning sample",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "GGT001",
+    "name": "Gamma-Glutamyl Transferase",
+    "category": "Clinical Chemistry",
+    "type": "Blood",
+    "description": "Measures GGT enzyme levels for liver function",
+    "preparation": "8 hours fasting required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "BAR001",
+    "name": "Barium Swallow",
+    "category": "Radiology",
+    "type": "Imaging",
+    "description": "X-ray imaging of upper digestive tract",
+    "preparation": "Nothing to eat or drink for 8 hours before test",
+    "turnaroundTime": "Immediate results",
+    "sampleRequired": "None - Imaging procedure"
+  },
+  {
+    "id": "TRO001",
+    "name": "Troponin Test",
+    "category": "Cardiac Markers",
+    "type": "Blood",
+    "description": "Checks for heart muscle damage",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "1-2 hours",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "AMH001",
+    "name": "Anti-Müllerian Hormone",
+    "category": "Reproductive Health",
+    "type": "Blood",
+    "description": "Assesses ovarian reserve",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "3-5 days",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "OCC001",
+    "name": "Occult Blood Test",
+    "category": "Clinical Chemistry",
+    "type": "Stool",
+    "description": "Checks for hidden blood in stool",
+    "preparation": "Dietary restrictions for 3 days before test",
+    "turnaroundTime": "1-3 days",
+    "sampleRequired": "Stool sample from 3 different movements"
+  },
+  {
+    "id": "RBC001",
+    "name": "Reticulocyte Count",
+    "category": "Hematology",
+    "type": "Blood",
+    "description": "Measures young red blood cells to assess bone marrow function",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "B12001",
+    "name": "Vitamin B12",
+    "category": "Clinical Chemistry",
+    "type": "Blood",
+    "description": "Measures vitamin B12 levels to check for deficiency",
+    "preparation": "8 hours fasting required",
+    "turnaroundTime": "1-2 days",
+    "sampleRequired": "4 mL of blood"
+  },
+  {
+    "id": "RF001",
+    "name": "Rheumatoid Factor",
+    "category": "Immunology",
+    "type": "Blood",
+    "description": "Tests for autoantibodies associated with rheumatoid arthritis",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "2-3 days",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "PRL001",
+    "name": "Prolactin",
+    "category": "Endocrinology",
+    "type": "Blood",
+    "description": "Measures prolactin hormone levels",
+    "preparation": "Morning sample preferred, avoid breast stimulation",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "CSF001",
+    "name": "CSF Analysis",
+    "category": "Neurology",
+    "type": "Cerebrospinal Fluid",
+    "description": "Analyzes cerebrospinal fluid for various conditions",
+    "preparation": "Performed during lumbar puncture procedure",
+    "turnaroundTime": "24-48 hours",
+    "sampleRequired": "2-3 mL of CSF"
+  },
+  {
+    "id": "ESR001",
+    "name": "Erythrocyte Sedimentation Rate",
+    "category": "Hematology",
+    "type": "Blood",
+    "description": "Measures inflammation level in body",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "COL001",
+    "name": "Colonoscopy",
+    "category": "Gastroenterology",
+    "type": "Endoscopy",
+    "description": "Visual examination of large intestine",
+    "preparation": "Bowel preparation protocol for 24-48 hours",
+    "turnaroundTime": "Same day for visual results, 3-5 days for biopsies",
+    "sampleRequired": "None - Endoscopic procedure"
+  },
+  {
+    "id": "INR001",
+    "name": "INR/Prothrombin Time",
+    "category": "Hematology",
+    "type": "Blood",
+    "description": "Measures blood clotting time",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "2-3 mL of blood"
+  },
+  {
+    "id": "COR001",
+    "name": "Cortisol",
+    "category": "Endocrinology",
+    "type": "Blood",
+    "description": "Measures stress hormone levels",
+    "preparation": "Morning sample required, fasting preferred",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "4 mL of blood"
+  },
+  {
+    "id": "BNP001",
+    "name": "Brain Natriuretic Peptide",
+    "category": "Cardiac Markers",
+    "type": "Blood",
+    "description": "Assesses heart failure",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "2-4 hours",
+    "sampleRequired": "4 mL of blood"
+  },
+  {
+    "id": "HLA001",
+    "name": "HLA Typing",
+    "category": "Immunology",
+    "type": "Blood",
+    "description": "Tests tissue compatibility for transplants",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "5-7 days",
+    "sampleRequired": "7 mL of blood"
+  },
+  {
+    "id": "ASO001",
+    "name": "Anti-Streptolysin O",
+    "category": "Immunology",
+    "type": "Blood",
+    "description": "Detects recent streptococcal infection",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "1-2 days",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "AMY001",
+    "name": "Amylase",
+    "category": "Clinical Chemistry",
+    "type": "Blood",
+    "description": "Checks pancreatic function",
+    "preparation": "8 hours fasting required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "BAL001",
+    "name": "Balance Test",
+    "category": "Neurology",
+    "type": "Physical Examination",
+    "description": "Assesses balance and coordination",
+    "preparation": "Wear comfortable clothing and shoes",
+    "turnaroundTime": "Immediate",
+    "sampleRequired": "None - Physical test"
+  },
+  {
+    "id": "AFP001",
+    "name": "Alpha-Fetoprotein",
+    "category": "Oncology",
+    "type": "Blood",
+    "description": "Screens for liver cancer and fetal abnormalities",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "2-3 days",
+    "sampleRequired": "4 mL of blood"
+  },
+  {
+    "id": "PFT001",
+    "name": "Pulmonary Function Test",
+    "category": "Pulmonology",
+    "type": "Breathing Test",
+    "description": "Comprehensive lung function assessment",
+    "preparation": "No smoking or exercise for 4 hours before test",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Breathing test"
+  },
+  {
+    "id": "SEP001",
+    "name": "Semen Analysis",
+    "category": "Reproductive Health",
+    "type": "Semen",
+    "description": "Evaluates male fertility parameters",
+    "preparation": "2-5 days of abstinence required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "2-5 mL of semen"
+  },
+  {
+    "id": "DNA001",
+    "name": "BRCA Gene Test",
+    "category": "Genetics",
+    "type": "Blood",
+    "description": "Screens for hereditary breast and ovarian cancer genes",
+    "preparation": "Genetic counseling required before testing",
+    "turnaroundTime": "2-3 weeks",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "GAL001",
+    "name": "Galactosemia Screen",
+    "category": "Metabolic",
+    "type": "Blood",
+    "description": "Tests newborns for galactose metabolism disorders",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "3-5 days",
+    "sampleRequired": "Few drops of blood"
+  },
+  {
+    "id": "SWE001",
+    "name": "Sweat Chloride Test",
+    "category": "Genetics",
+    "type": "Sweat",
+    "description": "Diagnoses cystic fibrosis",
+    "preparation": "No lotions or creams on test area",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "Sweat sample"
+  },
+  {
+    "id": "MON001",
+    "name": "Monospot Test",
+    "category": "Infectious Disease",
+    "type": "Blood",
+    "description": "Screens for infectious mononucleosis",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "BIO001",
+    "name": "Body Composition Analysis",
+    "category": "Nutrition",
+    "type": "Physical Measurement",
+    "description": "Measures body fat, muscle mass, and water content",
+    "preparation": "No eating or drinking for 4 hours before test",
+    "turnaroundTime": "Immediate",
+    "sampleRequired": "None - Physical measurement"
+  },
+  {
+    "id": "LEP001",
+    "name": "Leptin Level",
+    "category": "Endocrinology",
+    "type": "Blood",
+    "description": "Measures hormone that regulates appetite",
+    "preparation": "8-12 hours fasting required",
+    "turnaroundTime": "3-5 days",
+    "sampleRequired": "4 mL of blood"
+  },
+  {
+    "id": "TRI001",
+    "name": "Triple Screen Test",
+    "category": "Prenatal",
+    "type": "Blood",
+    "description": "Screens for fetal abnormalities during pregnancy",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "5-7 days",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "SAL001",
+    "name": "Salivary Cortisol",
+    "category": "Endocrinology",
+    "type": "Saliva",
+    "description": "Measures stress hormone levels throughout the day",
+    "preparation": "No eating or drinking 30 minutes before collection",
+    "turnaroundTime": "3-5 days",
+    "sampleRequired": "4 saliva samples"
+  },
+  {
+    "id": "KAR001",
+    "name": "Karyotype Analysis",
+    "category": "Genetics",
+    "type": "Blood",
+    "description": "Examines chromosome structure and number",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "10-14 days",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "BAE001",
+    "name": "Barium Enema",
+    "category": "Radiology",
+    "type": "Imaging",
+    "description": "X-ray examination of lower digestive tract",
+    "preparation": "Bowel preparation required day before",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Imaging procedure"
+  },
+  {
+    "id": "MET001",
+    "name": "Metabolic Panel",
+    "category": "Clinical Chemistry",
+    "type": "Blood",
+    "description": "Comprehensive assessment of metabolism",
+    "preparation": "8-12 hours fasting required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "SCL001",
+    "name": "Scleroderma Antibodies",
+    "category": "Immunology",
+    "type": "Blood",
+    "description": "Tests for autoimmune markers of scleroderma",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "5-7 days",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "VNG001",
+    "name": "Videonystagmography",
+    "category": "Neurology",
+    "type": "Eye Movement Recording",
+    "description": "Tests inner ear and motor functions",
+    "preparation": "No medications that affect balance",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Recording procedure"
+  },
+  {
+    "id": "ZIN001",
+    "name": "Zinc Level",
+    "category": "Nutrition",
+    "type": "Blood",
+    "description": "Measures zinc levels in blood",
+    "preparation": "Fasting preferred",
+    "turnaroundTime": "3-5 days",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "PCA001",
+    "name": "Procalcitonin",
+    "category": "Infectious Disease",
+    "type": "Blood",
+    "description": "Helps diagnose bacterial sepsis",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "2-4 hours",
+    "sampleRequired": "4 mL of blood"
+  },
+  {
+    "id": "TNF001",
+    "name": "Tumor Necrosis Factor",
+    "category": "Immunology",
+    "type": "Blood",
+    "description": "Measures inflammatory cytokine levels",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "3-5 days",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "MSU001",
+    "name": "Musculoskeletal Ultrasound",
+    "category": "Radiology",
+    "type": "Imaging",
+    "description": "Images muscles, tendons, and ligaments",
+    "preparation": "Wear loose clothing",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Imaging procedure"
+  },
+  {
+    "id": "CYS001",
+    "name": "Cystoscopy",
+    "category": "Urology",
+    "type": "Endoscopy",
+    "description": "Examines bladder and urinary tract",
+    "preparation": "Urine sample for testing before procedure",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Endoscopic procedure"
+  },
+  {
+    "id": "EOS001",
+    "name": "Eosinophil Count",
+    "category": "Hematology",
+    "type": "Blood",
+    "description": "Measures specific white blood cells",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "GHR001",
+    "name": "Growth Hormone",
+    "category": "Endocrinology",
+    "type": "Blood",
+    "description": "Measures growth hormone levels",
+    "preparation": "Fasting and rest required",
+    "turnaroundTime": "2-3 days",
+    "sampleRequired": "4 mL of blood"
+  },
+  {
+    "id": "TOX001",
+    "name": "Heavy Metal Screen",
+    "category": "Toxicology",
+    "type": "Blood",
+    "description": "Tests for lead, mercury, arsenic, and other heavy metals",
+    "preparation": "No seafood for 3 days before test",
+    "turnaroundTime": "5-7 days",
+    "sampleRequired": "6 mL of blood"
+  },
+  {
+    "id": "CAR001",
+    "name": "Cardiac Calcium Score",
+    "category": "Cardiology",
+    "type": "Imaging",
+    "description": "CT scan to detect calcium in coronary arteries",
+    "preparation": "No caffeine 4 hours before test",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Imaging procedure"
+  },
+  {
+    "id": "CF001",
+    "name": "Cystic Fibrosis Gene Panel",
+    "category": "Genetics",
+    "type": "Blood",
+    "description": "Comprehensive genetic testing for CF mutations",
+    "preparation": "Genetic counseling recommended",
+    "turnaroundTime": "2-3 weeks",
+    "sampleRequired": "5 mL of blood"
+  },
+  {
+    "id": "DXA001",
+    "name": "DEXA Scan",
+    "category": "Bone Health",
+    "type": "Imaging",
+    "description": "Measures bone density",
+    "preparation": "No calcium supplements 24 hours before",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Imaging procedure"
+  },
+  {
+    "id": "VOC001",
+    "name": "VO2 Max Test",
+    "category": "Sports Medicine",
+    "type": "Exercise Test",
+    "description": "Measures maximum oxygen consumption during exercise",
+    "preparation": "No strenuous exercise 24 hours before",
+    "turnaroundTime": "Immediate",
+    "sampleRequired": "None - Physical test"
+  },
+  {
+    "id": "NEU001",
+    "name": "Neuropsychological Testing",
+    "category": "Neurology",
+    "type": "Cognitive Assessment",
+    "description": "Evaluates cognitive function and behavior",
+    "preparation": "Well-rested, bring glasses if needed",
+    "turnaroundTime": "5-7 days",
+    "sampleRequired": "None - Cognitive test"
+  },
+  {
+    "id": "MIC001",
+    "name": "Microalbumin Test",
+    "category": "Nephrology",
+    "type": "Urine",
+    "description": "Detects early kidney damage",
+    "preparation": "First morning sample preferred",
+    "turnaroundTime": "1-2 days",
+    "sampleRequired": "10 mL of urine"
+  },
+  {
+    "id": "HIS001",
+    "name": "Histamine Level",
+    "category": "Allergy/Immunology",
+    "type": "Blood",
+    "description": "Measures histamine levels for allergy evaluation",
+    "preparation": "Fasting required",
+    "turnaroundTime": "3-5 days",
+    "sampleRequired": "4 mL of blood"
+  },
+  {
+    "id": "OTO001",
+    "name": "Otoacoustic Emissions",
+    "category": "Audiology",
+    "type": "Hearing Test",
+    "description": "Tests function of inner ear",
+    "preparation": "Quiet environment needed",
+    "turnaroundTime": "Immediate",
+    "sampleRequired": "None - Hearing test"
+  },
+  {
+    "id": "CHL001",
+    "name": "Chlamydia PCR",
+    "category": "STD Testing",
+    "type": "Urine",
+    "description": "Tests for chlamydia infection",
+    "preparation": "No urination for 2 hours before",
+    "turnaroundTime": "1-3 days",
+    "sampleRequired": "20 mL of urine"
+  },
+  {
+    "id": "PNE001",
+    "name": "Pneumonia Panel",
+    "category": "Infectious Disease",
+    "type": "Sputum",
+    "description": "Identifies bacteria causing pneumonia",
+    "preparation": "Morning sample preferred",
+    "turnaroundTime": "2-3 days",
+    "sampleRequired": "Sputum sample"
+  },
+  {
+    "id": "CCA001",
+    "name": "Circulating Cancer Cells",
+    "category": "Oncology",
+    "type": "Blood",
+    "description": "Detects cancer cells in bloodstream",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "7-10 days",
+    "sampleRequired": "7 mL of blood"
+  },
+  {
+    "id": "ERG001",
+    "name": "Ergometry",
+    "category": "Occupational Health",
+    "type": "Physical Test",
+    "description": "Evaluates physical work capacity",
+    "preparation": "Wear comfortable clothing",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Physical test"
+  },
+  {
+    "id": "MLD001",
+    "name": "Mold Allergy Panel",
+    "category": "Allergy/Immunology",
+    "type": "Blood",
+    "description": "Tests for allergies to common molds",
+    "preparation": "No antihistamines for 7 days",
+    "turnaroundTime": "3-5 days",
+    "sampleRequired": "4 mL of blood"
+  },
+  {
+    "id": "BIA001",
+    "name": "Bioelectrical Impedance",
+    "category": "Nutrition",
+    "type": "Physical Test",
+    "description": "Measures body composition",
+    "preparation": "No eating/drinking 4 hours before",
+    "turnaroundTime": "Immediate",
+    "sampleRequired": "None - Physical test"
+  },
+  {
+    "id": "TPO001",
+    "name": "TPO Antibodies",
+    "category": "Endocrinology",
+    "type": "Blood",
+    "description": "Tests for thyroid autoimmune disorder",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "2-3 days",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "SNP001",
+    "name": "Sleep Study",
+    "category": "Sleep Medicine",
+    "type": "Monitoring",
+    "description": "Evaluates sleep patterns and disorders",
+    "preparation": "Follow normal sleep routine",
+    "turnaroundTime": "7-10 days",
+    "sampleRequired": "None - Overnight monitoring"
+  },
+  {
+    "id": "VMA001",
+    "name": "VMA Test",
+    "category": "Endocrinology",
+    "type": "Urine",
+    "description": "Screens for pheochromocytoma",
+    "preparation": "Dietary restrictions for 3 days",
+    "turnaroundTime": "5-7 days",
+    "sampleRequired": "24-hour urine collection"
+  },
+  {
+    "id": "TLR001",
+    "name": "Tilt Table Test",
+    "category": "Cardiology",
+    "type": "Physical Test",
+    "description": "Evaluates causes of fainting",
+    "preparation": "No eating 4 hours before",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Physical test"
+  },
+  {
+    "id": "MTB001",
+    "name": "Metabolic Rate Test",
+    "category": "Nutrition",
+    "type": "Breathing Test",
+    "description": "Measures resting energy expenditure",
+    "preparation": "12 hours fasting, no exercise",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Breathing test"
+  },
+  {
+    "id": "GAI001",
+    "name": "Gait Analysis",
+    "category": "Physical Therapy",
+    "type": "Motion Analysis",
+    "description": "Evaluates walking pattern",
+    "preparation": "Wear comfortable shoes",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Physical test"
+  },
+  {
+    "id": "CRP002",
+    "name": "Cryptococcal Antigen",
+    "category": "Infectious Disease",
+    "type": "Blood",
+    "description": "Tests for fungal infection",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "1-2 days",
+    "sampleRequired": "3 mL of blood"
+  },
+  {
+    "id": "ADA001",
+    "name": "Adenosine Deaminase",
+    "category": "Immunology",
+    "type": "Blood",
+    "description": "Helps diagnose tuberculosis",
+    "preparation": "No special preparation required",
+    "turnaroundTime": "3-5 days",
+    "sampleRequired": "4 mL of blood"
+  },
+  {
+    "id": "THR001",
+    "name": "Thromboelastogram",
+    "category": "Hematology",
+    "type": "Blood",
+    "description": "Evaluates blood clotting dynamics",
+    "preparation": "No blood thinners for 24 hours",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "4 mL of blood"
+  },
+  {
+    "id": "NCV001",
+    "name": "Nerve Conduction Velocity",
+    "category": "Neurology",
+    "type": "Electrical Test",
+    "description": "Measures nerve signal transmission speed",
+    "preparation": "No lotions on test areas",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Physical test"
+  },
+  {
+    "id": "CEC001",
+    "name": "Caloric Test",
+    "category": "ENT",
+    "type": "Balance Test",
+    "description": "Evaluates inner ear function",
+    "preparation": "No food for 3 hours before",
+    "turnaroundTime": "Same day",
+    "sampleRequired": "None - Physical test"
+  }
+]

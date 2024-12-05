@@ -1,32 +1,29 @@
 "use client";
 
-import { useState } from "react";
 import logowhite from "../../public/logowhite.png";
-import {
-  FaTwitter,
-  FaLinkedin,
-  FaGithub,
-  FaInstagram,
-  FaWordpress,
-} from "react-icons/fa";
+import { FaTwitter, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
   const footerNavs = [
     {
       href: "/login",
-      name: "Patient Login",
+      name: "Login",
     },
     {
       href: "/patients",
       name: "Patients",
     },
     {
-      href: "#",
+      href: "/providers",
       name: "Healthcare Providers",
     },
     {
-      href: "#",
+      href: "/tests",
+      name: "Our Tests",
+    },
+    {
+      href: "/about",
       name: "About",
     },
   ];
@@ -54,11 +51,11 @@ export default function Footer() {
         ))}
       </ul>
       <div className="mt-8 items-center justify-between sm:flex">
-        <div className="mt-4 sm:mt-0">
+        <div className="mt-4 sm:mt-0 text-sm">
           &copy; {new Date().getFullYear()} Bhavik Naik All rights reserved.
         </div>
         <div className="mt-6 sm:mt-0">
-          <div className="text-right flex flex-row text-2xl  ">
+          <div className="text-right flex flex-row text-xl  ">
             <a
               href="mailto:bhavik.naik28@gmail.com"
               className="mx-2 hover:opacity-75"

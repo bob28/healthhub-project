@@ -129,6 +129,9 @@ export default function LoginPage() {
         <Image src={logoBG} width={175} alt="Logo" className="mb-7" />
         <Card className="max-w-full w-[450px] px-5 pt-3 text-secondary">
           <CardBody className="overflow-hidden">
+            <p className="text-sm mb-5 text-center">
+              Login in as a patient or healthcare provider
+            </p>
             <Tabs
               fullWidth
               size="md"

@@ -2,12 +2,6 @@
 import NavbarComp from "../components/navbar";
 import { Button } from "@nextui-org/button";
 import Footer from "../components/footer";
-import {
-  FaCalendarAlt,
-  FaFileAlt,
-  FaClipboardList,
-  FaFlask,
-} from "react-icons/fa";
 
 export default function Home() {
   const patientFeatures = [
@@ -24,7 +18,7 @@ export default function Home() {
       desc: "Prepare for your test by following our guidelines.",
     },
     {
-      title: "Tests and Services",
+      title: "Our Tests",
       desc: "Learn more about the tests and services we offer.",
     },
   ];
@@ -123,17 +117,21 @@ export default function Home() {
                 ))}
               </ul>
               <div className="flex items-center justify-center mt-10 gap-x-5">
-                <Button size="md" color="primary" className="">
-                  Login as a Patient
-                </Button>
-                <Button
-                  size="md"
-                  color="secondary"
-                  className=""
-                  variant="bordered"
-                >
-                  Patient Services
-                </Button>
+                <a href="/login">
+                  <Button size="md" color="primary" className="">
+                    Login as a Patient
+                  </Button>
+                </a>
+                <a href="/patients">
+                  <Button
+                    size="md"
+                    color="secondary"
+                    className=""
+                    variant="bordered"
+                  >
+                    Patient Services
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -141,7 +139,7 @@ export default function Home() {
           <div className="flex-1 text-center  mt-10 lg:mt-0">
             <h2 className="text-3xl text-secondary ">
               For{" "}
-              <span className="text-primary font-bold ">
+              <span className="text-accent font-bold ">
                 Healthcare Providers
               </span>
             </h2>
@@ -160,9 +158,11 @@ export default function Home() {
                 ))}
               </ul>
               <div className="flex items-center justify-center mt-10 gap-x-5">
-                <Button size="md" color="primary" className="">
-                  Login as a Healthcare Provider
-                </Button>
+                <a href="/login">
+                  <Button size="md" className="bg-accent text-white">
+                    Login as a Healthcare Provider
+                  </Button>
+                </a>
                 <Button
                   size="md"
                   color="secondary"
@@ -195,14 +195,14 @@ export default function Home() {
                   Login or Sign Up
                 </Button>
               </a>
-              <a href="javascript:void(0)">
+              <a href="/tests">
                 <Button
                   variant="bordered"
                   size="lg"
                   color="secondary"
                   className=""
                 >
-                  Learn more
+                  View Tests
                 </Button>
               </a>
             </div>
