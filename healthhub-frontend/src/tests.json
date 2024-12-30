@@ -1,7 +1,7 @@
 [
   {
     "id": "CBC001",
-    "name": "Complete Blood Count (CBC)",
+    "value": "Complete Blood Count (CBC)",
     "category": "Hematology",
     "type": "Blood",
     "description": "Measures different components of blood including red cells, white cells, and platelets",
@@ -11,7 +11,7 @@
   },
   {
     "id": "COV001",
-    "name": "COVID-19 PCR Test",
+    "value": "COVID-19 PCR Test",
     "category": "Infectious Disease",
     "type": "Nasopharyngeal Swab",
     "description": "Detects genetic material of the SARS-CoV-2 virus",
@@ -21,7 +21,7 @@
   },
   {
     "id": "LFT001",
-    "name": "Liver Function Test",
+    "value": "Liver Function Test",
     "category": "Clinical Chemistry",
     "type": "Blood",
     "description": "Measures various chemicals in the blood to evaluate liver function",
@@ -31,7 +31,7 @@
   },
   {
     "id": "ECG001",
-    "name": "Electrocardiogram",
+    "value": "Electrocardiogram",
     "category": "Cardiology",
     "type": "Electrical Activity Recording",
     "description": "Records electrical signals from the heart to check for various heart conditions",
@@ -41,7 +41,7 @@
   },
   {
     "id": "URI001",
-    "name": "Urinalysis",
+    "value": "Urinalysis",
     "category": "Clinical Chemistry",
     "type": "Urine",
     "description": "Analyzes physical, chemical, and microscopic properties of urine",
@@ -51,7 +51,7 @@
   },
   {
     "id": "TSH001",
-    "name": "Thyroid Stimulating Hormone",
+    "value": "Thyroid Stimulating Hormone",
     "category": "Endocrinology",
     "type": "Blood",
     "description": "Measures thyroid stimulating hormone to assess thyroid function",
@@ -61,7 +61,7 @@
   },
   {
     "id": "CRP001",
-    "name": "C-Reactive Protein",
+    "value": "C-Reactive Protein",
     "category": "Immunology",
     "type": "Blood",
     "description": "Measures level of inflammation in the body",
@@ -71,7 +71,7 @@
   },
   {
     "id": "HBA001",
-    "name": "Hemoglobin A1C",
+    "value": "Hemoglobin A1C",
     "category": "Clinical Chemistry",
     "type": "Blood",
     "description": "Measures average blood sugar levels over past 2-3 months",
@@ -81,7 +81,7 @@
   },
   {
     "id": "STR001",
-    "name": "Strep Throat Test",
+    "value": "Strep Throat Test",
     "category": "Microbiology",
     "type": "Throat Swab",
     "description": "Detects presence of group A streptococcus bacteria",
@@ -91,7 +91,7 @@
   },
   {
     "id": "CHO001",
-    "name": "Lipid Panel",
+    "value": "Lipid Panel",
     "category": "Clinical Chemistry",
     "type": "Blood",
     "description": "Measures cholesterol and triglyceride levels",
@@ -101,7 +101,7 @@
   },
   {
     "id": "FER001",
-    "name": "Ferritin",
+    "value": "Ferritin",
     "category": "Hematology",
     "type": "Blood",
     "description": "Measures iron storage levels in the body",
@@ -111,7 +111,7 @@
   },
   {
     "id": "PSA001",
-    "name": "Prostate Specific Antigen",
+    "value": "Prostate Specific Antigen",
     "category": "Oncology",
     "type": "Blood",
     "description": "Screens for prostate cancer and other prostate conditions",
@@ -121,7 +121,7 @@
   },
   {
     "id": "XRY001",
-    "name": "Chest X-Ray",
+    "value": "Chest X-Ray",
     "category": "Radiology",
     "type": "Imaging",
     "description": "Images of chest cavity to examine heart, lungs, and bones",
@@ -131,7 +131,7 @@
   },
   {
     "id": "ULT001",
-    "name": "Abdominal Ultrasound",
+    "value": "Abdominal Ultrasound",
     "category": "Radiology",
     "type": "Imaging",
     "description": "Images of abdominal organs using sound waves",
@@ -141,7 +141,7 @@
   },
   {
     "id": "VIT001",
-    "name": "Vitamin D",
+    "value": "Vitamin D",
     "category": "Clinical Chemistry",
     "type": "Blood",
     "description": "Measures vitamin D levels in blood",
@@ -151,7 +151,7 @@
   },
   {
     "id": "FBC001",
-    "name": "Fecal Blood Test",
+    "value": "Fecal Blood Test",
     "category": "Clinical Chemistry",
     "type": "Stool",
     "description": "Detects blood in stool sample",
@@ -161,7 +161,7 @@
   },
   {
     "id": "HIV001",
-    "name": "HIV Antibody/Antigen Test",
+    "value": "HIV Antibody/Antigen Test",
     "category": "Infectious Disease",
     "type": "Blood",
     "description": "Screens for HIV infection",
@@ -171,7 +171,7 @@
   },
   {
     "id": "MRI001",
-    "name": "MRI Brain",
+    "value": "MRI Brain",
     "category": "Radiology",
     "type": "Imaging",
     "description": "Detailed images of brain using magnetic fields",
@@ -181,7 +181,7 @@
   },
   {
     "id": "PTH001",
-    "name": "Parathyroid Hormone",
+    "value": "Parathyroid Hormone",
     "category": "Endocrinology",
     "type": "Blood",
     "description": "Measures parathyroid hormone levels",
@@ -191,7 +191,7 @@
   },
   {
     "id": "HEP001",
-    "name": "Hepatitis Panel",
+    "value": "Hepatitis Panel",
     "category": "Infectious Disease",
     "type": "Blood",
     "description": "Screens for various types of hepatitis infections",
@@ -201,7 +201,7 @@
   },
   {
     "id": "ALG001",
-    "name": "Allergy Panel",
+    "value": "Allergy Panel",
     "category": "Immunology",
     "type": "Blood",
     "description": "Tests for specific IgE antibodies to various allergens",
@@ -211,7 +211,7 @@
   },
   {
     "id": "SPR001",
-    "name": "Spirometry",
+    "value": "Spirometry",
     "category": "Pulmonology",
     "type": "Breathing Test",
     "description": "Measures lung function and capacity",
@@ -221,7 +221,7 @@
   },
   {
     "id": "CTS001",
-    "name": "CT Scan Abdomen",
+    "value": "CT Scan Abdomen",
     "category": "Radiology",
     "type": "Imaging",
     "description": "Detailed cross-sectional images of abdomen",
@@ -231,7 +231,7 @@
   },
   {
     "id": "FOL001",
-    "name": "Folic Acid Test",
+    "value": "Folic Acid Test",
     "category": "Clinical Chemistry",
     "type": "Blood",
     "description": "Measures folic acid levels in blood",
@@ -241,7 +241,7 @@
   },
   {
     "id": "CUL001",
-    "name": "Urine Culture",
+    "value": "Urine Culture",
     "category": "Microbiology",
     "type": "Urine",
     "description": "Tests for presence of bacteria in urine",
@@ -251,7 +251,7 @@
   },
   {
     "id": "MAM001",
-    "name": "Mammogram",
+    "value": "Mammogram",
     "category": "Radiology",
     "type": "Imaging",
     "description": "X-ray imaging of breast tissue",
@@ -261,7 +261,7 @@
   },
   {
     "id": "TES001",
-    "name": "Testosterone Level",
+    "value": "Testosterone Level",
     "category": "Endocrinology",
     "type": "Blood",
     "description": "Measures testosterone hormone levels",
@@ -271,7 +271,7 @@
   },
   {
     "id": "PAP001",
-    "name": "Pap Smear",
+    "value": "Pap Smear",
     "category": "Cytology",
     "type": "Cervical Smear",
     "description": "Screens for cervical cancer and abnormalities",
@@ -281,7 +281,7 @@
   },
   {
     "id": "EEG001",
-    "name": "Electroencephalogram",
+    "value": "Electroencephalogram",
     "category": "Neurology",
     "type": "Electrical Activity Recording",
     "description": "Records electrical activity of the brain",
@@ -291,7 +291,7 @@
   },
   {
     "id": "ANA001",
-    "name": "Antinuclear Antibody Test",
+    "value": "Antinuclear Antibody Test",
     "category": "Immunology",
     "type": "Blood",
     "description": "Screens for autoimmune disorders",
@@ -301,7 +301,7 @@
   },
   {
     "id": "DEX001",
-    "name": "Dexamethasone Suppression Test",
+    "value": "Dexamethasone Suppression Test",
     "category": "Endocrinology",
     "type": "Blood",
     "description": "Evaluates cortisol production",
@@ -311,7 +311,7 @@
   },
   {
     "id": "GGT001",
-    "name": "Gamma-Glutamyl Transferase",
+    "value": "Gamma-Glutamyl Transferase",
     "category": "Clinical Chemistry",
     "type": "Blood",
     "description": "Measures GGT enzyme levels for liver function",
@@ -321,7 +321,7 @@
   },
   {
     "id": "BAR001",
-    "name": "Barium Swallow",
+    "value": "Barium Swallow",
     "category": "Radiology",
     "type": "Imaging",
     "description": "X-ray imaging of upper digestive tract",
@@ -331,7 +331,7 @@
   },
   {
     "id": "TRO001",
-    "name": "Troponin Test",
+    "value": "Troponin Test",
     "category": "Cardiac Markers",
     "type": "Blood",
     "description": "Checks for heart muscle damage",
@@ -341,7 +341,7 @@
   },
   {
     "id": "AMH001",
-    "name": "Anti-Müllerian Hormone",
+    "value": "Anti-Müllerian Hormone",
     "category": "Reproductive Health",
     "type": "Blood",
     "description": "Assesses ovarian reserve",
@@ -351,7 +351,7 @@
   },
   {
     "id": "OCC001",
-    "name": "Occult Blood Test",
+    "value": "Occult Blood Test",
     "category": "Clinical Chemistry",
     "type": "Stool",
     "description": "Checks for hidden blood in stool",
@@ -361,7 +361,7 @@
   },
   {
     "id": "RBC001",
-    "name": "Reticulocyte Count",
+    "value": "Reticulocyte Count",
     "category": "Hematology",
     "type": "Blood",
     "description": "Measures young red blood cells to assess bone marrow function",
@@ -371,7 +371,7 @@
   },
   {
     "id": "B12001",
-    "name": "Vitamin B12",
+    "value": "Vitamin B12",
     "category": "Clinical Chemistry",
     "type": "Blood",
     "description": "Measures vitamin B12 levels to check for deficiency",
@@ -381,7 +381,7 @@
   },
   {
     "id": "RF001",
-    "name": "Rheumatoid Factor",
+    "value": "Rheumatoid Factor",
     "category": "Immunology",
     "type": "Blood",
     "description": "Tests for autoantibodies associated with rheumatoid arthritis",
@@ -391,7 +391,7 @@
   },
   {
     "id": "PRL001",
-    "name": "Prolactin",
+    "value": "Prolactin",
     "category": "Endocrinology",
     "type": "Blood",
     "description": "Measures prolactin hormone levels",
@@ -401,7 +401,7 @@
   },
   {
     "id": "CSF001",
-    "name": "CSF Analysis",
+    "value": "CSF Analysis",
     "category": "Neurology",
     "type": "Cerebrospinal Fluid",
     "description": "Analyzes cerebrospinal fluid for various conditions",
@@ -411,7 +411,7 @@
   },
   {
     "id": "ESR001",
-    "name": "Erythrocyte Sedimentation Rate",
+    "value": "Erythrocyte Sedimentation Rate",
     "category": "Hematology",
     "type": "Blood",
     "description": "Measures inflammation level in body",
@@ -421,7 +421,7 @@
   },
   {
     "id": "COL001",
-    "name": "Colonoscopy",
+    "value": "Colonoscopy",
     "category": "Gastroenterology",
     "type": "Endoscopy",
     "description": "Visual examination of large intestine",
@@ -431,7 +431,7 @@
   },
   {
     "id": "INR001",
-    "name": "INR/Prothrombin Time",
+    "value": "INR/Prothrombin Time",
     "category": "Hematology",
     "type": "Blood",
     "description": "Measures blood clotting time",
@@ -441,7 +441,7 @@
   },
   {
     "id": "COR001",
-    "name": "Cortisol",
+    "value": "Cortisol",
     "category": "Endocrinology",
     "type": "Blood",
     "description": "Measures stress hormone levels",
@@ -451,7 +451,7 @@
   },
   {
     "id": "BNP001",
-    "name": "Brain Natriuretic Peptide",
+    "value": "Brain Natriuretic Peptide",
     "category": "Cardiac Markers",
     "type": "Blood",
     "description": "Assesses heart failure",
@@ -461,7 +461,7 @@
   },
   {
     "id": "HLA001",
-    "name": "HLA Typing",
+    "value": "HLA Typing",
     "category": "Immunology",
     "type": "Blood",
     "description": "Tests tissue compatibility for transplants",
@@ -471,7 +471,7 @@
   },
   {
     "id": "ASO001",
-    "name": "Anti-Streptolysin O",
+    "value": "Anti-Streptolysin O",
     "category": "Immunology",
     "type": "Blood",
     "description": "Detects recent streptococcal infection",
@@ -481,7 +481,7 @@
   },
   {
     "id": "AMY001",
-    "name": "Amylase",
+    "value": "Amylase",
     "category": "Clinical Chemistry",
     "type": "Blood",
     "description": "Checks pancreatic function",
@@ -491,7 +491,7 @@
   },
   {
     "id": "BAL001",
-    "name": "Balance Test",
+    "value": "Balance Test",
     "category": "Neurology",
     "type": "Physical Examination",
     "description": "Assesses balance and coordination",
@@ -501,7 +501,7 @@
   },
   {
     "id": "AFP001",
-    "name": "Alpha-Fetoprotein",
+    "value": "Alpha-Fetoprotein",
     "category": "Oncology",
     "type": "Blood",
     "description": "Screens for liver cancer and fetal abnormalities",
@@ -511,7 +511,7 @@
   },
   {
     "id": "PFT001",
-    "name": "Pulmonary Function Test",
+    "value": "Pulmonary Function Test",
     "category": "Pulmonology",
     "type": "Breathing Test",
     "description": "Comprehensive lung function assessment",
@@ -521,7 +521,7 @@
   },
   {
     "id": "SEP001",
-    "name": "Semen Analysis",
+    "value": "Semen Analysis",
     "category": "Reproductive Health",
     "type": "Semen",
     "description": "Evaluates male fertility parameters",
@@ -531,7 +531,7 @@
   },
   {
     "id": "DNA001",
-    "name": "BRCA Gene Test",
+    "value": "BRCA Gene Test",
     "category": "Genetics",
     "type": "Blood",
     "description": "Screens for hereditary breast and ovarian cancer genes",
@@ -541,7 +541,7 @@
   },
   {
     "id": "GAL001",
-    "name": "Galactosemia Screen",
+    "value": "Galactosemia Screen",
     "category": "Metabolic",
     "type": "Blood",
     "description": "Tests newborns for galactose metabolism disorders",
@@ -551,7 +551,7 @@
   },
   {
     "id": "SWE001",
-    "name": "Sweat Chloride Test",
+    "value": "Sweat Chloride Test",
     "category": "Genetics",
     "type": "Sweat",
     "description": "Diagnoses cystic fibrosis",
@@ -561,7 +561,7 @@
   },
   {
     "id": "MON001",
-    "name": "Monospot Test",
+    "value": "Monospot Test",
     "category": "Infectious Disease",
     "type": "Blood",
     "description": "Screens for infectious mononucleosis",
@@ -571,7 +571,7 @@
   },
   {
     "id": "BIO001",
-    "name": "Body Composition Analysis",
+    "value": "Body Composition Analysis",
     "category": "Nutrition",
     "type": "Physical Measurement",
     "description": "Measures body fat, muscle mass, and water content",
@@ -581,7 +581,7 @@
   },
   {
     "id": "LEP001",
-    "name": "Leptin Level",
+    "value": "Leptin Level",
     "category": "Endocrinology",
     "type": "Blood",
     "description": "Measures hormone that regulates appetite",
@@ -591,7 +591,7 @@
   },
   {
     "id": "TRI001",
-    "name": "Triple Screen Test",
+    "value": "Triple Screen Test",
     "category": "Prenatal",
     "type": "Blood",
     "description": "Screens for fetal abnormalities during pregnancy",
@@ -601,7 +601,7 @@
   },
   {
     "id": "SAL001",
-    "name": "Salivary Cortisol",
+    "value": "Salivary Cortisol",
     "category": "Endocrinology",
     "type": "Saliva",
     "description": "Measures stress hormone levels throughout the day",
@@ -611,7 +611,7 @@
   },
   {
     "id": "KAR001",
-    "name": "Karyotype Analysis",
+    "value": "Karyotype Analysis",
     "category": "Genetics",
     "type": "Blood",
     "description": "Examines chromosome structure and number",
@@ -621,7 +621,7 @@
   },
   {
     "id": "BAE001",
-    "name": "Barium Enema",
+    "value": "Barium Enema",
     "category": "Radiology",
     "type": "Imaging",
     "description": "X-ray examination of lower digestive tract",
@@ -631,7 +631,7 @@
   },
   {
     "id": "MET001",
-    "name": "Metabolic Panel",
+    "value": "Metabolic Panel",
     "category": "Clinical Chemistry",
     "type": "Blood",
     "description": "Comprehensive assessment of metabolism",
@@ -641,7 +641,7 @@
   },
   {
     "id": "SCL001",
-    "name": "Scleroderma Antibodies",
+    "value": "Scleroderma Antibodies",
     "category": "Immunology",
     "type": "Blood",
     "description": "Tests for autoimmune markers of scleroderma",
@@ -651,7 +651,7 @@
   },
   {
     "id": "VNG001",
-    "name": "Videonystagmography",
+    "value": "Videonystagmography",
     "category": "Neurology",
     "type": "Eye Movement Recording",
     "description": "Tests inner ear and motor functions",
@@ -661,7 +661,7 @@
   },
   {
     "id": "ZIN001",
-    "name": "Zinc Level",
+    "value": "Zinc Level",
     "category": "Nutrition",
     "type": "Blood",
     "description": "Measures zinc levels in blood",
@@ -671,7 +671,7 @@
   },
   {
     "id": "PCA001",
-    "name": "Procalcitonin",
+    "value": "Procalcitonin",
     "category": "Infectious Disease",
     "type": "Blood",
     "description": "Helps diagnose bacterial sepsis",
@@ -681,7 +681,7 @@
   },
   {
     "id": "TNF001",
-    "name": "Tumor Necrosis Factor",
+    "value": "Tumor Necrosis Factor",
     "category": "Immunology",
     "type": "Blood",
     "description": "Measures inflammatory cytokine levels",
@@ -691,7 +691,7 @@
   },
   {
     "id": "MSU001",
-    "name": "Musculoskeletal Ultrasound",
+    "value": "Musculoskeletal Ultrasound",
     "category": "Radiology",
     "type": "Imaging",
     "description": "Images muscles, tendons, and ligaments",
@@ -701,7 +701,7 @@
   },
   {
     "id": "CYS001",
-    "name": "Cystoscopy",
+    "value": "Cystoscopy",
     "category": "Urology",
     "type": "Endoscopy",
     "description": "Examines bladder and urinary tract",
@@ -711,7 +711,7 @@
   },
   {
     "id": "EOS001",
-    "name": "Eosinophil Count",
+    "value": "Eosinophil Count",
     "category": "Hematology",
     "type": "Blood",
     "description": "Measures specific white blood cells",
@@ -721,7 +721,7 @@
   },
   {
     "id": "GHR001",
-    "name": "Growth Hormone",
+    "value": "Growth Hormone",
     "category": "Endocrinology",
     "type": "Blood",
     "description": "Measures growth hormone levels",
@@ -731,7 +731,7 @@
   },
   {
     "id": "TOX001",
-    "name": "Heavy Metal Screen",
+    "value": "Heavy Metal Screen",
     "category": "Toxicology",
     "type": "Blood",
     "description": "Tests for lead, mercury, arsenic, and other heavy metals",
@@ -741,7 +741,7 @@
   },
   {
     "id": "CAR001",
-    "name": "Cardiac Calcium Score",
+    "value": "Cardiac Calcium Score",
     "category": "Cardiology",
     "type": "Imaging",
     "description": "CT scan to detect calcium in coronary arteries",
@@ -751,7 +751,7 @@
   },
   {
     "id": "CF001",
-    "name": "Cystic Fibrosis Gene Panel",
+    "value": "Cystic Fibrosis Gene Panel",
     "category": "Genetics",
     "type": "Blood",
     "description": "Comprehensive genetic testing for CF mutations",
@@ -761,7 +761,7 @@
   },
   {
     "id": "DXA001",
-    "name": "DEXA Scan",
+    "value": "DEXA Scan",
     "category": "Bone Health",
     "type": "Imaging",
     "description": "Measures bone density",
@@ -771,7 +771,7 @@
   },
   {
     "id": "VOC001",
-    "name": "VO2 Max Test",
+    "value": "VO2 Max Test",
     "category": "Sports Medicine",
     "type": "Exercise Test",
     "description": "Measures maximum oxygen consumption during exercise",
@@ -781,7 +781,7 @@
   },
   {
     "id": "NEU001",
-    "name": "Neuropsychological Testing",
+    "value": "Neuropsychological Testing",
     "category": "Neurology",
     "type": "Cognitive Assessment",
     "description": "Evaluates cognitive function and behavior",
@@ -791,7 +791,7 @@
   },
   {
     "id": "MIC001",
-    "name": "Microalbumin Test",
+    "value": "Microalbumin Test",
     "category": "Nephrology",
     "type": "Urine",
     "description": "Detects early kidney damage",
@@ -801,7 +801,7 @@
   },
   {
     "id": "HIS001",
-    "name": "Histamine Level",
+    "value": "Histamine Level",
     "category": "Allergy/Immunology",
     "type": "Blood",
     "description": "Measures histamine levels for allergy evaluation",
@@ -811,7 +811,7 @@
   },
   {
     "id": "OTO001",
-    "name": "Otoacoustic Emissions",
+    "value": "Otoacoustic Emissions",
     "category": "Audiology",
     "type": "Hearing Test",
     "description": "Tests function of inner ear",
@@ -821,7 +821,7 @@
   },
   {
     "id": "CHL001",
-    "name": "Chlamydia PCR",
+    "value": "Chlamydia PCR",
     "category": "STD Testing",
     "type": "Urine",
     "description": "Tests for chlamydia infection",
@@ -831,7 +831,7 @@
   },
   {
     "id": "PNE001",
-    "name": "Pneumonia Panel",
+    "value": "Pneumonia Panel",
     "category": "Infectious Disease",
     "type": "Sputum",
     "description": "Identifies bacteria causing pneumonia",
@@ -841,7 +841,7 @@
   },
   {
     "id": "CCA001",
-    "name": "Circulating Cancer Cells",
+    "value": "Circulating Cancer Cells",
     "category": "Oncology",
     "type": "Blood",
     "description": "Detects cancer cells in bloodstream",
@@ -851,7 +851,7 @@
   },
   {
     "id": "ERG001",
-    "name": "Ergometry",
+    "value": "Ergometry",
     "category": "Occupational Health",
     "type": "Physical Test",
     "description": "Evaluates physical work capacity",
@@ -861,7 +861,7 @@
   },
   {
     "id": "MLD001",
-    "name": "Mold Allergy Panel",
+    "value": "Mold Allergy Panel",
     "category": "Allergy/Immunology",
     "type": "Blood",
     "description": "Tests for allergies to common molds",
@@ -871,7 +871,7 @@
   },
   {
     "id": "BIA001",
-    "name": "Bioelectrical Impedance",
+    "value": "Bioelectrical Impedance",
     "category": "Nutrition",
     "type": "Physical Test",
     "description": "Measures body composition",
@@ -881,7 +881,7 @@
   },
   {
     "id": "TPO001",
-    "name": "TPO Antibodies",
+    "value": "TPO Antibodies",
     "category": "Endocrinology",
     "type": "Blood",
     "description": "Tests for thyroid autoimmune disorder",
@@ -891,7 +891,7 @@
   },
   {
     "id": "SNP001",
-    "name": "Sleep Study",
+    "value": "Sleep Study",
     "category": "Sleep Medicine",
     "type": "Monitoring",
     "description": "Evaluates sleep patterns and disorders",
@@ -901,7 +901,7 @@
   },
   {
     "id": "VMA001",
-    "name": "VMA Test",
+    "value": "VMA Test",
     "category": "Endocrinology",
     "type": "Urine",
     "description": "Screens for pheochromocytoma",
@@ -911,7 +911,7 @@
   },
   {
     "id": "TLR001",
-    "name": "Tilt Table Test",
+    "value": "Tilt Table Test",
     "category": "Cardiology",
     "type": "Physical Test",
     "description": "Evaluates causes of fainting",
@@ -921,7 +921,7 @@
   },
   {
     "id": "MTB001",
-    "name": "Metabolic Rate Test",
+    "value": "Metabolic Rate Test",
     "category": "Nutrition",
     "type": "Breathing Test",
     "description": "Measures resting energy expenditure",
@@ -931,7 +931,7 @@
   },
   {
     "id": "GAI001",
-    "name": "Gait Analysis",
+    "value": "Gait Analysis",
     "category": "Physical Therapy",
     "type": "Motion Analysis",
     "description": "Evaluates walking pattern",
@@ -941,7 +941,7 @@
   },
   {
     "id": "CRP002",
-    "name": "Cryptococcal Antigen",
+    "value": "Cryptococcal Antigen",
     "category": "Infectious Disease",
     "type": "Blood",
     "description": "Tests for fungal infection",
@@ -951,7 +951,7 @@
   },
   {
     "id": "ADA001",
-    "name": "Adenosine Deaminase",
+    "value": "Adenosine Deaminase",
     "category": "Immunology",
     "type": "Blood",
     "description": "Helps diagnose tuberculosis",
@@ -961,7 +961,7 @@
   },
   {
     "id": "THR001",
-    "name": "Thromboelastogram",
+    "value": "Thromboelastogram",
     "category": "Hematology",
     "type": "Blood",
     "description": "Evaluates blood clotting dynamics",
@@ -971,7 +971,7 @@
   },
   {
     "id": "NCV001",
-    "name": "Nerve Conduction Velocity",
+    "value": "Nerve Conduction Velocity",
     "category": "Neurology",
     "type": "Electrical Test",
     "description": "Measures nerve signal transmission speed",
@@ -981,7 +981,7 @@
   },
   {
     "id": "CEC001",
-    "name": "Caloric Test",
+    "value": "Caloric Test",
     "category": "ENT",
     "type": "Balance Test",
     "description": "Evaluates inner ear function",

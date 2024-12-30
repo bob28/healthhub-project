@@ -1,6 +1,6 @@
 "use client";
 import NavbarComp from "../components/navbar";
-import { Button } from "@nextui-org/button";
+import { Button } from "@mantine/core";
 import Footer from "../components/footer";
 
 export default function Home() {
@@ -64,7 +64,7 @@ export default function Home() {
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
               <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-secondary ring-1 ring-slate-900/10 hover:ring-slate-900/20">
                 Learn more about this SaaS application.{" "}
-                <a href="#" className="font-semibold text-secondary">
+                <a href="/about" className="font-semibold text-secondary">
                   <span aria-hidden="true" className="absolute inset-0" />
                   Read more <span aria-hidden="true">&rarr;</span>
                 </a>
@@ -117,21 +117,26 @@ export default function Home() {
                 ))}
               </ul>
               <div className="flex items-center justify-center mt-10 gap-x-5">
-                <a href="/login">
-                  <Button size="md" color="primary" className="">
-                    Login as a Patient
-                  </Button>
-                </a>
-                <a href="/patients">
-                  <Button
-                    size="md"
-                    color="secondary"
-                    className=""
-                    variant="bordered"
-                  >
-                    Patient Services
-                  </Button>
-                </a>
+                <Button
+                  component="a"
+                  href="/login"
+                  color="primary"
+                  variant="outline"
+                  size="md"
+                  radius="md"
+                >
+                  Login as a Patient
+                </Button>
+                <Button
+                  component="a"
+                  href="/patients"
+                  color="primary"
+                  className=""
+                  size="md"
+                  radius="md"
+                >
+                  Patient Services
+                </Button>
               </div>
             </div>
           </div>
@@ -158,16 +163,22 @@ export default function Home() {
                 ))}
               </ul>
               <div className="flex items-center justify-center mt-10 gap-x-5">
-                <a href="/login">
-                  <Button size="md" className="bg-accent text-white">
-                    Login as a Healthcare Provider
-                  </Button>
-                </a>
                 <Button
+                  component="a"
+                  href="/login"
+                  color="accent.7"
+                  variant="outline"
                   size="md"
-                  color="secondary"
-                  className=""
-                  variant="bordered"
+                  radius="md"
+                >
+                  Login as a Provider
+                </Button>
+                <Button
+                  component="a"
+                  href="/providers"
+                  color="accent"
+                  size="md"
+                  radius="md"
                 >
                   Provider Services
                 </Button>
@@ -190,21 +201,27 @@ export default function Home() {
               </p>
             </div>
             <div className="flex gap-3 items-center mt-4 md:justify-center">
-              <a href="/login">
-                <Button size="lg" color="primary" className="">
-                  Login or Sign Up
-                </Button>
-              </a>
-              <a href="/tests">
-                <Button
-                  variant="bordered"
-                  size="lg"
-                  color="secondary"
-                  className=""
-                >
-                  View Tests
-                </Button>
-              </a>
+              <Button
+                color="primary"
+                component="a"
+                href="/login"
+                size="md"
+                className=""
+                radius="md"
+              >
+                Login or Sign Up
+              </Button>
+              <Button
+                component="a"
+                href="/tests"
+                variant="outline"
+                size="md"
+                color="secondary"
+                className=""
+                radius="md"
+              >
+                View Tests
+              </Button>
             </div>
           </div>
         </section>

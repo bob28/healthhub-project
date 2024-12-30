@@ -2,34 +2,42 @@
 import { useState } from "react";
 import NavbarComp from "@/src/components/navbar";
 import Footer from "@/src/components/footer";
+import CallToActionSection from "@/src/components/callToAction";
 import medicalTests from "@/src/tests.json";
+
 import {
-  FaCalendarAlt,
-  FaFileAlt,
-  FaLock,
-  FaChartLine,
-  FaBell,
-  FaLongArrowAltRight,
-  FaClipboardList,
-} from "react-icons/fa";
-import {
-  Button,
   Autocomplete,
-  AutocompleteItem,
+  AutocompleteProps,
+  Group,
+  Text,
   Card,
-  CardBody,
   Accordion,
-  AccordionItem,
-  CardFooter,
-  CardHeader,
-} from "@nextui-org/react";
+} from "@mantine/core";
+
+import { FaSearch } from "react-icons/fa";
+
+const renderAutocompleteOption: AutocompleteProps["renderOption"] = ({
+  option,
+}) => (
+  <Group gap="sm">
+    <div className="text-secondary">
+      <Text size="md">{option.value}</Text>
+      <Text size="sm" opacity={0.5}>
+        {medicalTests.filter((test) => test.value === option.value)[0].category}
+      </Text>
+    </div>
+  </Group>
+);
 
 export default function Tests() {
-  const [selectedTest, setSelectedTest] = useState<string | null>(null);
+  const [selectedTest, setSelectedTest] = useState<string>("");
 
-  //    group the tests by category
+  // group the tests by category
   const groupedTests = medicalTests.reduce(
-    (acc: { [key: string]: typeof medicalTests }, test) => {
+    (
+      acc: { [key in keyof typeof medicalCategories]?: typeof medicalTests },
+      test
+    ) => {
       const { category } = test;
       if (!acc[category]) {
         acc[category] = [];
@@ -40,7 +48,7 @@ export default function Tests() {
     {}
   );
 
-  //    Create a new group called "Other" for categories with less than 2 tests
+  // Create a new group called "Other" for categories with less than 2 tests
   const otherTests = [];
   Object.keys(groupedTests).forEach((category) => {
     if (groupedTests[category].length < 2) {
@@ -53,7 +61,7 @@ export default function Tests() {
     groupedTests["Other"] = otherTests;
   }
 
-  const medicalCategories = {
+  const medicalCategories: { [key: string]: string } = {
     Hematology:
       "Tests that examine your blood cells and blood-related conditions. These help detect conditions like anemia, blood clotting problems, and blood cell disorders.",
     "Infectious Disease":
@@ -105,8 +113,8 @@ export default function Tests() {
       <section className="py-28 z-20">
         <div className="max-w-screen-xl mx-auto px-4 md:text-center md:px-8 relative">
           <div className="max-w-xl space-y-3 md:mx-auto">
-            <h3 className="text-primary font-semibold ">Testing</h3>
-            <p className="text-secondary text-3xl font-semibold sm:text-4xl">
+            <h3 className="text-primary font-semibold text-lg">Testing</h3>
+            <p className="text-secondary text-5xl font-semibold">
               Comprehensive Lab Tests
             </p>
             <p className="text-secondary">
@@ -117,61 +125,47 @@ export default function Tests() {
               categories below to see what we offer.
             </p>
           </div>
-          <div className="mt-10">
+          <div className="mt-10 ">
             <Autocomplete
-              defaultItems={medicalTests}
+              data={medicalTests}
               aria-label="Search for a test"
-              variant="bordered"
-              size="lg"
+              variant=""
+              size="md"
               placeholder="Start typing to search for a test..."
-              className="max-w-md shadow-md border-none rounded-b-none"
-              onSelectionChange={(item) => {
-                setSelectedTest(item);
+              className="mx-auto max-w-md shadow-md rounded-t-md  rounded-b-none bg-primary"
+              onChange={setSelectedTest}
+              comboboxProps={{ shadow: "md" }}
+              value={selectedTest}
+              renderOption={renderAutocompleteOption}
+              classNames={{
+                input: "!text-secondary placeholder:!text-secondary",
               }}
-            >
-              {(test) => (
-                <AutocompleteItem
-                  key={test.id}
-                  textValue={test.name}
-                  className="border-none"
-                >
-                  <div className="flex gap-2 items-center ">
-                    <div className="flex flex-col text-secondary">
-                      <span className="text-small">{test.name}</span>
-                      <span className="text-tiny ">{test.category}</span>
-                    </div>
-                  </div>
-                </AutocompleteItem>
-              )}
-            </Autocomplete>
-            <div
-              className="max-w-md mx-auto flex items-center justify-center "
-              classNames={{}}
-            >
+              leftSection={<FaSearch className="text-secondary" />}
+            ></Autocomplete>
+
+            <div className="max-w-md mx-auto flex items-center justify-center ">
               {selectedTest &&
                 medicalTests
-                  .filter((test) =>
-                    test.id.toLowerCase().includes(selectedTest.toLowerCase())
+                  .filter(
+                    (test) =>
+                      test.value.toLowerCase() === selectedTest.toLowerCase()
                   )
                   .map((test) => (
                     <Card
-                      isBlurred
+                      shadow="md"
+                      padding="lg"
                       key={test.id}
-                      className="bg-transparent rounded-t-none w-full"
+                      className="w-full"
                     >
-                      <CardHeader className="justify-between align-middle px-5 pt-5">
-                        <div className="flex flex-col items-start justify-center">
-                          <h4 className="text-lg font-semibold leading-none text-secondary">
-                            {test.name}
-                          </h4>
-                        </div>
-                        <div>
-                          <p className="text-secondary text-xs">{test.id}</p>
-                        </div>
-                      </CardHeader>
-                      <CardBody className="px-5 pb-5 text-small text-secondary -mt-2">
+                      <Card.Section className="justify-between align-middle text-left pt-5 px-5">
+                        <h4 className="text-lg font-semibold text-secondary ">
+                          {test.value}
+                        </h4>
+                        <p className="text-secondary text-xs my-2">{test.id}</p>
+                      </Card.Section>
+                      <Card.Section className="pb-5 px-5 text-sm text-secondary  text-left">
                         <p>{test.description}</p>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 mb-4 gap-4 mt-4">
                           {[
                             { label: "Type", value: test.type },
                             { label: "Category", value: test.category },
@@ -188,11 +182,11 @@ export default function Tests() {
                             </div>
                           ))}
                         </div>
-                        <div className="mt-3">
+                        <div className=" text-left">
                           <h5 className="text-md font-bold">Preparation:</h5>
-                          <p>{test.preparation}</p>
+                          <p className="text-sm">{test.preparation}</p>
                         </div>
-                      </CardBody>
+                      </Card.Section>
                     </Card>
                   ))}
             </div>
@@ -209,61 +203,44 @@ export default function Tests() {
               Browse through our extensive list of medical lab tests. From
               routine check-ups to specialized diagnostics, find the tests you
               need to stay proactive about your health.
+              <br />
+              Click on the categories below to expand and view the tests
+              available.
             </p>
           </div>
 
-          <Accordion variant="light">
-            {Object.keys(groupedTests).map((category) => (
-              <AccordionItem
-                key={category}
-                title={category}
-                subtitle={medicalCategories[category]}
-              >
-                <ul>
-                  {groupedTests[category].map((test) => (
-                    <li key={test.id} className="text-secondary">
-                      <b>{test.name}</b> - {test.description}
-                    </li>
-                  ))}
-                </ul>
-              </AccordionItem>
-            ))}
+          <Accordion
+            variant="contained"
+            className="mb-10"
+            chevronPosition="left"
+          >
+            {Object.entries(groupedTests).map(([category, tests]) => {
+              const categoryDescription =
+                medicalCategories[category] || "No description available.";
+              return (
+                <Accordion.Item key={category} value={category}>
+                  <Accordion.Control>
+                    {category}
+                    <p className="text-secondary text-sm mb-4">
+                      {categoryDescription}
+                    </p>
+                  </Accordion.Control>
+                  <Accordion.Panel>
+                    <ul>
+                      {tests.map((test) => (
+                        <li key={test.id} className="text-secondary">
+                          <b>{test.value}</b> - {test.description}
+                        </li>
+                      ))}
+                    </ul>
+                  </Accordion.Panel>
+                </Accordion.Item>
+              );
+            })}
           </Accordion>
         </section>
-        <section className="relative max-w-screen-xl mx-auto py-4 px-4 md:px-8">
-          <div className="relative z-10 gap-5 items-center lg:flex">
-            <div className="flex-1 max-w-lg py-5 sm:mx-auto sm:text-center lg:max-w-max lg:text-left text-secondary">
-              <h3 className="text-3xl font-semibold md:text-4xl">
-                Take the Next Step in Your Health Journey
-              </h3>
-              <p className=" leading-relaxed mt-3">
-                Join HealthHub today and gain access to comprehensive healthcare
-                tests and personalized patient care. Whether you’re looking to
-                book an appointment, view your test results, or track your
-                health progress, we’re here to support you every step of the
-                way. Sign up now to start your journey towards better health.
-              </p>
-              <a href="/login">
-                <Button
-                  variant="flat"
-                  className="bg-[#CFE2B6] text-secondary mt-5"
-                  endContent={<FaLongArrowAltRight />}
-                >
-                  Try it now
-                </Button>
-              </a>
-            </div>
-            <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
-              <img
-                src="https:i.postimg.cc/kgd4WhyS/container.png"
-                alt=""
-                className="w-full"
-              />
-            </div>
-          </div>
-        </section>
       </div>
-
+      <CallToActionSection />
       <Footer />
     </div>
   );

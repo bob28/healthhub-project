@@ -1,286 +1,216 @@
 "use client";
-import React, { useState } from "react";
+
 import {
-  Tabs,
-  Tab,
-  Input,
-  Link,
+  Paper,
+  Image,
+  TextInput,
+  PasswordInput,
+  Checkbox,
+  Stack,
+  Group,
+  Anchor,
   Button,
-  Card,
-  CardBody,
-} from "@nextui-org/react";
+  Radio,
+  Flex,
+} from "@mantine/core";
+import { useForm } from "@mantine/form";
+import { upperFirst, useToggle } from "@mantine/hooks";
 import logoBG from "../../../public/logoBG.png";
-import Image from "next/image";
+import loginPicture from "../../../public/loginPicture.jpg";
 
 export default function LoginPage() {
-  const [selected, setSelected] = useState("login");
-  const [loginData, setLoginData] = useState({ email: "", password: "" });
-  const [createdAccount, setCreatedAccount] = useState(false);
-  const validateEmail = (value) =>
-    value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
-  const [signUpData, setSignUpData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    reEmail: "",
-    password: "",
-    rePassword: "",
+  const [type, toggle] = useToggle(["login", "register"]);
+
+  const form = useForm({
+    initialValues: {
+      email: "",
+      firstName: "",
+      lastName: "",
+      userType: "patient",
+      password: "",
+      terms: false,
+    },
+
+    validate: {
+      email: (val) => (/^\S+@\S+$/.test(val) ? null : "Invalid email"),
+      password: (val) =>
+        val.length <= 6
+          ? "Password should include at least 6 characters"
+          : null,
+    },
   });
-  const [errors, setErrors] = useState({});
 
-  const isInvalidLoginEmail = React.useMemo(() => {
-    if (loginData.email === "") return false;
-
-    return validateEmail(loginData.email) ? false : true;
-  }, [loginData.email]);
-
-  const isInvalidSignUpEmail = React.useMemo(() => {
-    if (signUpData.email === "") return false;
-
-    return validateEmail(signUpData.email) ? false : true;
-  }, [signUpData.email]);
-
-  const handleLoginChange = (e) => {
-    setLoginData({ ...loginData, [e.target.id]: e.target.value });
-  };
-
-  const handleSignUpChange = (e) => {
-    setSignUpData({ ...signUpData, [e.target.id]: e.target.value });
-  };
-
-  const validateSignUp = () => {
-    // make sure that all the fields are not empty
-    if (
-      !signUpData.firstName ||
-      !signUpData.lastName ||
-      !signUpData.email ||
-      !signUpData.reEmail ||
-      !signUpData.password ||
-      !signUpData.rePassword
-    ) {
-      return false;
-    }
-    // make sure that the email is valid
-    if (!validateEmail(signUpData.email)) {
-      setErrors({ ...errors, email: "Please enter a valid email" });
-      return false;
-    }
-    // make sure that the re-entered email is the same as the email
-    if (signUpData.reEmail !== signUpData.email) {
-      setErrors({ ...errors, reEmail: "Emails do not match" });
-      return false;
-    }
-    // make sure that the re-entered password is the same as the password
-    if (signUpData.rePassword !== signUpData.password) {
-      setErrors({ ...errors, rePassword: "Passwords do not match" });
-      return false;
-    }
-    return true;
-  };
-
-  const handleLoginSubmit = async (e) => {
-    // make sure that loginData.email and loginData.password are not empty
-    if (!loginData.email || !loginData.password) {
-      return;
-    }
-    if (!isInvalidLoginEmail) return;
-    e.preventDefault();
-    // Call the login API
-    try {
-      const response = await fetch("/api/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(loginData),
-      });
-      const result = await response.json();
-      console.log(result);
-      // Handle successful login
-    } catch (error) {
-      console.error("Error logging in:", error);
-    }
-  };
-
-  const handleSignUpSubmit = async (e) => {
-    e.preventDefault();
-    if (!validateSignUp()) return;
-    // Call the sign-up API
-    try {
-      const response = await fetch("/api/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(signUpData),
-      });
-      const result = await response.json();
-      setCreatedAccount(true);
-      console.log(result);
-      // Handle successful sign-up
-    } catch (error) {
-      console.error("Error signing up:", error);
+  const submitForm = (values: any) => {
+    if (type === "register") {
+      console.log("Registering", values);
+    } else {
+      console.log("Logging in", values);
     }
   };
 
   return (
     <div>
-      <div className="flex flex-col items-center justify-center min-h-screen px-5">
-        <Image src={logoBG} width={175} alt="Logo" className="mb-7" />
-        <Card className="max-w-full w-[450px] px-5 pt-3 text-secondary">
-          <CardBody className="overflow-hidden">
-            <p className="text-sm mb-5 text-center">
-              Login in as a patient or healthcare provider
-            </p>
-            <Tabs
-              fullWidth
-              size="md"
-              aria-label="Tabs form"
-              selectedKey={selected}
-              onSelectionChange={setSelected}
-              variant="light"
-            >
-              <Tab key="login" title="Login">
-                <form
-                  className="flex flex-col gap-5"
-                  onSubmit={handleLoginSubmit}
-                >
-                  <Input
-                    isRequired
-                    id="email"
-                    placeholder="Email*"
-                    type="email"
-                    value={loginData.email}
-                    isInvalid={isInvalidLoginEmail}
-                    color={isInvalidLoginEmail ? "danger" : "default"}
-                    errorMessage="Please enter a valid email"
-                    onChange={handleLoginChange}
-                  />
-                  <Input
-                    isRequired
-                    id="password"
-                    placeholder="Password*"
-                    type="password"
-                    value={loginData.password}
-                    onChange={handleLoginChange}
-                  />
-                  <div className="flex gap-2">
-                    <Button fullWidth color="primary" type="submit">
-                      Login
-                    </Button>
-                  </div>
-                  <p className="text-center text-xs justify-end">
-                    Need to create an account?{" "}
-                    <Link
-                      className="cursor-pointer font-bold text-xs"
-                      size="sm"
-                      onPress={() => setSelected("sign-up")}
-                    >
-                      Sign up
-                    </Link>
-                  </p>
-                </form>
-              </Tab>
-              <Tab key="sign-up" title="Sign up">
-                <form
-                  className="flex flex-col gap-4"
-                  onSubmit={handleSignUpSubmit}
-                >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <Input
-                      isRequired
-                      id="firstName"
-                      placeholder="First Name*"
-                      type="text"
-                      value={signUpData.firstName}
-                      onChange={handleSignUpChange}
-                    />
-                    <Input
-                      isRequired
-                      id="lastName"
-                      placeholder="Last Name*"
-                      type="text"
-                      value={signUpData.lastName}
-                      onChange={handleSignUpChange}
-                    />
-                  </div>
-                  <Input
-                    isRequired
-                    id="email"
-                    placeholder="Email*"
-                    type="email"
-                    value={signUpData.email}
-                    isInvalid={isInvalidSignUpEmail}
-                    color={isInvalidSignUpEmail ? "danger" : "default"}
-                    errorMessage="Please enter a valid email"
-                    onChange={handleSignUpChange}
-                  />
-                  <Input
-                    isRequired
-                    id="reEmail"
-                    placeholder="Re-enter Email*"
-                    type="email"
-                    value={signUpData.reEmail}
-                    isInvalid={signUpData.reEmail !== signUpData.email}
-                    color={
-                      signUpData.reEmail !== signUpData.email
-                        ? "danger"
-                        : "default"
-                    }
-                    errorMessage="Emails do not match"
-                    onChange={handleSignUpChange}
-                  />
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <Input
-                      isRequired
-                      id="password"
-                      placeholder="Password*"
-                      type="password"
-                      value={signUpData.password}
-                      onChange={handleSignUpChange}
-                    />
-                    <Input
-                      isRequired
-                      id="rePassword"
-                      placeholder="Re-enter Password*"
-                      type="password"
-                      value={signUpData.rePassword}
-                      onChange={handleSignUpChange}
-                      isInvalid={signUpData.rePassword !== signUpData.password}
-                      color={
-                        signUpData.rePassword !== signUpData.password
-                          ? "danger"
-                          : "default"
+      <div className="flex h-screen overflow-hidden">
+        <div className="w-full lg:w-1/2 flex items-center justify-center">
+          <div className="flex flex-col items-center justify-center p-5">
+            <Image src={logoBG.src} alt="Logo" className="!w-44 mb-5" />
+            <Paper radius="md" p="xl" shadow="xl" className="w-full">
+              <p className="text-center text-secondary text-sm mb-5">
+                {type === "register"
+                  ? "Welcome to HealthHub! Fill out the form to create an account"
+                  : "Welcome back to HealthHub! Please log in to your account."}
+              </p>
+              <form
+                onSubmit={form.onSubmit(() => {
+                  submitForm(form.values);
+                })}
+              >
+                <Stack>
+                  {type === "register" && (
+                    <Radio.Group
+                      name="userType"
+                      label="Are you a:"
+                      withAsterisk
+                      description="Please select whether you are registering as a patient or a provider."
+                      value={form.values.userType}
+                      onChange={(event) =>
+                        form.setFieldValue("userType", event)
                       }
-                      errorMessage="Passwords do not match"
-                    />
-                  </div>
-                  <div className="flex gap-2">
-                    <Button fullWidth color="primary" type="submit">
-                      Sign up
-                    </Button>
-                  </div>
-                  <p className="text-center text-xs justify-end">
-                    Already have an account?{" "}
-                    <Link
-                      size="sm"
-                      className="cursor-pointer font-bold text-xs"
-                      onPress={() => setSelected("login")}
                     >
-                      Login
-                    </Link>
-                  </p>
-                </form>
-                {createdAccount && (
-                  <p className="text-left text-secondary mt-5">
-                    Account created successfully! Please login into your
-                    account.
-                  </p>
-                )}
-              </Tab>
-            </Tabs>
-          </CardBody>
-        </Card>
+                      <Group mt="xs">
+                        <Radio
+                          value="patient"
+                          label="A Patient"
+                          color="primary"
+                        />
+                        <Radio
+                          value="provider"
+                          label="A Healthcare Provider"
+                          color="accent"
+                        />
+                      </Group>
+                    </Radio.Group>
+                  )}
+                  <Flex className="w-full flex-col lg:flex-row gap-4">
+                    {type === "register" && (
+                      <TextInput
+                        label="First Name"
+                        withAsterisk
+                        required
+                        placeholder="Your first name"
+                        value={form.values.firstName}
+                        onChange={(event) =>
+                          form.setFieldValue(
+                            "firstName",
+                            event.currentTarget.value
+                          )
+                        }
+                        radius="md"
+                        className="w-full lg:w-1/2"
+                      />
+                    )}
+                    {type === "register" && (
+                      <TextInput
+                        label="Last Name"
+                        placeholder="Your last name"
+                        withAsterisk
+                        required
+                        value={form.values.lastName}
+                        onChange={(event) =>
+                          form.setFieldValue(
+                            "lastName",
+                            event.currentTarget.value
+                          )
+                        }
+                        radius="md"
+                        className="w-full lg:w-1/2"
+                      />
+                    )}
+                  </Flex>
+
+                  <TextInput
+                    required
+                    label="Email"
+                    placeholder="hello@email.com"
+                    value={form.values.email}
+                    onChange={(event) =>
+                      form.setFieldValue("email", event.currentTarget.value)
+                    }
+                    error={form.errors.email && "Invalid email"}
+                    radius="md"
+                    className="w-full"
+                  />
+
+                  <PasswordInput
+                    required
+                    label="Password"
+                    placeholder="Your password"
+                    value={form.values.password}
+                    onChange={(event) =>
+                      form.setFieldValue("password", event.currentTarget.value)
+                    }
+                    error={
+                      form.errors.password &&
+                      "Password should include at least 6 characters"
+                    }
+                    radius="md"
+                    className="w-full"
+                  />
+
+                  {type === "register" && (
+                    <Checkbox
+                      label="I accept terms and conditions"
+                      checked={form.values.terms}
+                      color={
+                        form.values.userType === "patient"
+                          ? "primary"
+                          : "accent"
+                      }
+                      onChange={(event) =>
+                        form.setFieldValue("terms", event.currentTarget.checked)
+                      }
+                      radius="xs"
+                      className="w-full"
+                    />
+                  )}
+                </Stack>
+
+                <Group justify="space-between" mt="xl">
+                  <Anchor
+                    component="button"
+                    type="button"
+                    c="dimmed"
+                    onClick={() => toggle()}
+                    size="sm"
+                  >
+                    {type === "register"
+                      ? "Already have an account? Login"
+                      : "Don't have an account? Register"}
+                  </Anchor>
+                  <Button
+                    type="submit"
+                    radius="xl"
+                    color={
+                      form.values.userType === "patient" ? "primary" : "accent"
+                    }
+                  >
+                    {upperFirst(type)}
+                  </Button>
+                </Group>
+              </form>
+            </Paper>
+          </div>
+        </div>
+        <div className="hidden lg:flex w-1/2 h-full">
+          <div className="w-full h-full">
+            <Image
+              className="w-full h-full object-cover"
+              radius="md"
+              alt="Login Picture"
+              src={loginPicture.src}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

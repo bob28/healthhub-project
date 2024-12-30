@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import logoBG from "../../public/logoBG.png";
 import React from "react";
-import { Button } from "@nextui-org/button";
+import { Button } from "@mantine/core";
 
 export default function NavbarComp() {
   const [state, setState] = useState(false);
@@ -56,11 +56,16 @@ export default function NavbarComp() {
             })}
             <span className="hidden w-px h-6 bg-gray-300 lg:block"></span>
             <div className="flex ">
-              <a href="/login">
-                <Button size="md" color="primary" className="">
-                  Login
-                </Button>
-              </a>
+              <Button
+                size="xs"
+                component="a"
+                href="/login"
+                color="primary"
+                className=""
+                radius="md"
+              >
+                Login
+              </Button>
             </div>
           </ul>
         </div>

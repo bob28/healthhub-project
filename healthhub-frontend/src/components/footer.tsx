@@ -7,6 +7,10 @@ import { MdEmail } from "react-icons/md";
 export default function Footer() {
   const footerNavs = [
     {
+      href: "/",
+      name: "Home",
+    },
+    {
       href: "/login",
       name: "Login",
     },

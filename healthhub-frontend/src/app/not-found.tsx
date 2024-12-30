@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@nextui-org/button";
+import { Button } from "@mantine/core";
 export default function NotFoundPage() {
   return (
     <main>
@@ -15,17 +15,14 @@ export default function NotFoundPage() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Button
+              component="a"
+              href="/"
+              variant=""
+              size="md"
               color="primary"
-              size="md"
-              onClick={() => window.history.back()}
-            >
-              Go back{" "}
-            </Button>
-            <Button
-              color="secondary"
-              variant="bordered"
-              size="md"
-              onClick={() => window.location.replace("/")}
+              className=""
+              radius="md"
+              autoContrast
             >
               Go Home
             </Button>
