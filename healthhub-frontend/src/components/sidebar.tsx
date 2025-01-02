@@ -38,7 +38,7 @@ const providerLinks = [
 
 export function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isPatient, setIsPatient] = useState(false);
+  const [isPatient, setIsPatient] = useState(true);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);

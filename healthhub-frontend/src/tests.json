@@ -7,7 +7,37 @@
     "description": "Measures different components of blood including red cells, white cells, and platelets",
     "preparation": "No special preparation required. Fasting may be required if other tests are being done simultaneously.",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3-5 mL of blood"
+    "sampleRequired": "3-5 mL of blood",
+    "fields": [
+      {
+        "name": "Hemoglobin",
+        "key": "hemoglobin",
+        "type": "number",
+        "unit": "g/dL",
+        "normalRange": "13.8-17.2"
+      },
+      {
+        "name": "White Blood Cells",
+        "key": "wbc",
+        "type": "number",
+        "unit": "cells/mcL",
+        "normalRange": "4,500-11,000"
+      },
+      {
+        "name": "Platelets",
+        "key": "platelets",
+        "type": "number",
+        "unit": "cells/mcL",
+        "normalRange": "150,000-450,000"
+      },
+      {
+        "name": "Red Blood Cells",
+        "key": "rbc",
+        "type": "number",
+        "unit": "cells/mcL",
+        "normalRange": "4.7-6.1"
+      }
+    ]
   },
   {
     "id": "COV001",
@@ -17,7 +47,16 @@
     "description": "Detects genetic material of the SARS-CoV-2 virus",
     "preparation": "No eating, drinking, smoking, or chewing gum for 30 minutes before the test",
     "turnaroundTime": "24-48 hours",
-    "sampleRequired": "Nasopharyngeal swab"
+    "sampleRequired": "Nasopharyngeal swab",
+    "fields": [
+      {
+        "name": "Result",
+        "key": "result",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "LFT001",
@@ -27,7 +66,37 @@
     "description": "Measures various chemicals in the blood to evaluate liver function",
     "preparation": "8-12 hours fasting required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "Alanine Aminotransferase (ALT)",
+        "key": "alt",
+        "type": "number",
+        "unit": "U/L",
+        "normalRange": "7-56"
+      },
+      {
+        "name": "Aspartate Aminotransferase (AST)",
+        "key": "ast",
+        "type": "number",
+        "unit": "U/L",
+        "normalRange": "10-40"
+      },
+      {
+        "name": "Alkaline Phosphatase (ALP)",
+        "key": "alp",
+        "type": "number",
+        "unit": "U/L",
+        "normalRange": "44-147"
+      },
+      {
+        "name": "Total Bilirubin",
+        "key": "total_bilirubin",
+        "type": "number",
+        "unit": "mg/dL",
+        "normalRange": "0.1-1.2"
+      }
+    ]
   },
   {
     "id": "ECG001",
@@ -37,7 +106,30 @@
     "description": "Records electrical signals from the heart to check for various heart conditions",
     "preparation": "Wear loose-fitting clothing, avoid applying lotions or oils to chest area",
     "turnaroundTime": "Immediate",
-    "sampleRequired": "None - External leads placement"
+    "sampleRequired": "None - External leads placement",
+    "fields": [
+      {
+        "name": "Heart Rate",
+        "key": "heart_rate",
+        "type": "number",
+        "unit": "bpm",
+        "normalRange": "60-100"
+      },
+      {
+        "name": "PR Interval",
+        "key": "pr_interval",
+        "type": "number",
+        "unit": "ms",
+        "normalRange": "120-200"
+      },
+      {
+        "name": "QRS Duration",
+        "key": "qrs_duration",
+        "type": "number",
+        "unit": "ms",
+        "normalRange": "80-120"
+      }
+    ]
   },
   {
     "id": "URI001",
@@ -47,7 +139,37 @@
     "description": "Analyzes physical, chemical, and microscopic properties of urine",
     "preparation": "Clean catch, midstream sample required. First morning sample preferred",
     "turnaroundTime": "Same day",
-    "sampleRequired": "30-60 mL of urine"
+    "sampleRequired": "30-60 mL of urine",
+    "fields": [
+      {
+        "name": "Color",
+        "key": "color",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Yellow"
+      },
+      {
+        "name": "pH",
+        "key": "ph",
+        "type": "number",
+        "unit": "",
+        "normalRange": "4.5-8.0"
+      },
+      {
+        "name": "Specific Gravity",
+        "key": "specific_gravity",
+        "type": "number",
+        "unit": "",
+        "normalRange": "1.005-1.030"
+      },
+      {
+        "name": "Protein",
+        "key": "protein",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "TSH001",
@@ -57,7 +179,16 @@
     "description": "Measures thyroid stimulating hormone to assess thyroid function",
     "preparation": "No special preparation required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3-5 mL of blood"
+    "sampleRequired": "3-5 mL of blood",
+    "fields": [
+      {
+        "name": "TSH Level",
+        "key": "tsh_level",
+        "type": "number",
+        "unit": "mIU/L",
+        "normalRange": "0.4-4.0"
+      }
+    ]
   },
   {
     "id": "CRP001",
@@ -67,7 +198,16 @@
     "description": "Measures level of inflammation in the body",
     "preparation": "No special preparation required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3-5 mL of blood"
+    "sampleRequired": "3-5 mL of blood",
+    "fields": [
+      {
+        "name": "CRP Level",
+        "key": "crp_level",
+        "type": "number",
+        "unit": "mg/L",
+        "normalRange": "<3.0"
+      }
+    ]
   },
   {
     "id": "HBA001",
@@ -77,7 +217,16 @@
     "description": "Measures average blood sugar levels over past 2-3 months",
     "preparation": "No fasting required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "HbA1c Level",
+        "key": "hba1c_level",
+        "type": "number",
+        "unit": "%",
+        "normalRange": "4.0-5.6"
+      }
+    ]
   },
   {
     "id": "STR001",
@@ -87,7 +236,16 @@
     "description": "Detects presence of group A streptococcus bacteria",
     "preparation": "No eating or drinking for 15 minutes before test",
     "turnaroundTime": "15-30 minutes (rapid) or 24-48 hours (culture)",
-    "sampleRequired": "Throat swab"
+    "sampleRequired": "Throat swab",
+    "fields": [
+      {
+        "name": "Result",
+        "key": "result",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "CHO001",
@@ -97,7 +255,37 @@
     "description": "Measures cholesterol and triglyceride levels",
     "preparation": "9-12 hours fasting required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "Total Cholesterol",
+        "key": "total_cholesterol",
+        "type": "number",
+        "unit": "mg/dL",
+        "normalRange": "<200"
+      },
+      {
+        "name": "HDL Cholesterol",
+        "key": "hdl_cholesterol",
+        "type": "number",
+        "unit": "mg/dL",
+        "normalRange": ">40"
+      },
+      {
+        "name": "LDL Cholesterol",
+        "key": "ldl_cholesterol",
+        "type": "number",
+        "unit": "mg/dL",
+        "normalRange": "<100"
+      },
+      {
+        "name": "Triglycerides",
+        "key": "triglycerides",
+        "type": "number",
+        "unit": "mg/dL",
+        "normalRange": "<150"
+      }
+    ]
   },
   {
     "id": "FER001",
@@ -107,7 +295,16 @@
     "description": "Measures iron storage levels in the body",
     "preparation": "No special preparation required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "Ferritin Level",
+        "key": "ferritin_level",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "30-400"
+      }
+    ]
   },
   {
     "id": "PSA001",
@@ -117,7 +314,16 @@
     "description": "Screens for prostate cancer and other prostate conditions",
     "preparation": "No ejaculation for 48 hours before test",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3-5 mL of blood"
+    "sampleRequired": "3-5 mL of blood",
+    "fields": [
+      {
+        "name": "PSA Level",
+        "key": "psa_level",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "<4.0"
+      }
+    ]
   },
   {
     "id": "XRY001",
@@ -127,7 +333,8 @@
     "description": "Images of chest cavity to examine heart, lungs, and bones",
     "preparation": "Remove jewelry and wear hospital gown",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Imaging procedure"
+    "sampleRequired": "None - Imaging procedure",
+    "fields": []
   },
   {
     "id": "ULT001",
@@ -137,7 +344,8 @@
     "description": "Images of abdominal organs using sound waves",
     "preparation": "6-8 hours fasting required, full bladder needed",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Imaging procedure"
+    "sampleRequired": "None - Imaging procedure",
+    "fields": []
   },
   {
     "id": "VIT001",
@@ -147,7 +355,16 @@
     "description": "Measures vitamin D levels in blood",
     "preparation": "No special preparation required",
     "turnaroundTime": "2-3 days",
-    "sampleRequired": "3-5 mL of blood"
+    "sampleRequired": "3-5 mL of blood",
+    "fields": [
+      {
+        "name": "Vitamin D Level",
+        "key": "vitamin_d_level",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "30-100"
+      }
+    ]
   },
   {
     "id": "FBC001",
@@ -157,7 +374,16 @@
     "description": "Detects blood in stool sample",
     "preparation": "Avoid certain foods and medications for 3 days before test",
     "turnaroundTime": "1-3 days",
-    "sampleRequired": "Stool sample"
+    "sampleRequired": "Stool sample",
+    "fields": [
+      {
+        "name": "Result",
+        "key": "result",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "HIV001",
@@ -167,7 +393,16 @@
     "description": "Screens for HIV infection",
     "preparation": "No special preparation required",
     "turnaroundTime": "1-3 days",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "Result",
+        "key": "result",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "MRI001",
@@ -177,7 +412,8 @@
     "description": "Detailed images of brain using magnetic fields",
     "preparation": "Remove all metal objects, inform of any implants",
     "turnaroundTime": "24-48 hours for results",
-    "sampleRequired": "None - Imaging procedure"
+    "sampleRequired": "None - Imaging procedure",
+    "fields": []
   },
   {
     "id": "PTH001",
@@ -187,7 +423,16 @@
     "description": "Measures parathyroid hormone levels",
     "preparation": "No special preparation required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3-5 mL of blood"
+    "sampleRequired": "3-5 mL of blood",
+    "fields": [
+      {
+        "name": "PTH Level",
+        "key": "pth_level",
+        "type": "number",
+        "unit": "pg/mL",
+        "normalRange": "10-65"
+      }
+    ]
   },
   {
     "id": "HEP001",
@@ -197,7 +442,30 @@
     "description": "Screens for various types of hepatitis infections",
     "preparation": "No special preparation required",
     "turnaroundTime": "2-3 days",
-    "sampleRequired": "5-7 mL of blood"
+    "sampleRequired": "5-7 mL of blood",
+    "fields": [
+      {
+        "name": "Hepatitis A",
+        "key": "hepatitis_a",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      },
+      {
+        "name": "Hepatitis B",
+        "key": "hepatitis_b",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      },
+      {
+        "name": "Hepatitis C",
+        "key": "hepatitis_c",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "ALG001",
@@ -207,7 +475,16 @@
     "description": "Tests for specific IgE antibodies to various allergens",
     "preparation": "No antihistamines for 7 days before test",
     "turnaroundTime": "3-5 days",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "IgE Level",
+        "key": "ige_level",
+        "type": "number",
+        "unit": "kU/L",
+        "normalRange": "<0.35"
+      }
+    ]
   },
   {
     "id": "SPR001",
@@ -217,7 +494,23 @@
     "description": "Measures lung function and capacity",
     "preparation": "No smoking or heavy exercise 2 hours before test",
     "turnaroundTime": "Immediate",
-    "sampleRequired": "None - Breathing into device"
+    "sampleRequired": "None - Breathing into device",
+    "fields": [
+      {
+        "name": "Forced Vital Capacity (FVC)",
+        "key": "fvc",
+        "type": "number",
+        "unit": "L",
+        "normalRange": "Varies by age, sex, height"
+      },
+      {
+        "name": "Forced Expiratory Volume (FEV1)",
+        "key": "fev1",
+        "type": "number",
+        "unit": "L",
+        "normalRange": "Varies by age, sex, height"
+      }
+    ]
   },
   {
     "id": "CTS001",
@@ -227,7 +520,8 @@
     "description": "Detailed cross-sectional images of abdomen",
     "preparation": "4-6 hours fasting, contrast dye may be required",
     "turnaroundTime": "24 hours for results",
-    "sampleRequired": "None - Imaging procedure"
+    "sampleRequired": "None - Imaging procedure",
+    "fields": []
   },
   {
     "id": "FOL001",
@@ -237,7 +531,16 @@
     "description": "Measures folic acid levels in blood",
     "preparation": "8 hours fasting required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "Folic Acid Level",
+        "key": "folic_acid_level",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "2.7-17.0"
+      }
+    ]
   },
   {
     "id": "CUL001",
@@ -247,7 +550,16 @@
     "description": "Tests for presence of bacteria in urine",
     "preparation": "Clean catch, midstream sample",
     "turnaroundTime": "48-72 hours",
-    "sampleRequired": "30 mL of urine"
+    "sampleRequired": "30 mL of urine",
+    "fields": [
+      {
+        "name": "Bacterial Growth",
+        "key": "bacterial_growth",
+        "type": "text",
+        "unit": "",
+        "normalRange": "No growth"
+      }
+    ]
   },
   {
     "id": "MAM001",
@@ -257,7 +569,8 @@
     "description": "X-ray imaging of breast tissue",
     "preparation": "No deodorant, powder, or lotion on breast area",
     "turnaroundTime": "1-2 days",
-    "sampleRequired": "None - Imaging procedure"
+    "sampleRequired": "None - Imaging procedure",
+    "fields": []
   },
   {
     "id": "TES001",
@@ -267,7 +580,16 @@
     "description": "Measures testosterone hormone levels",
     "preparation": "Blood draw in morning, fasting preferred",
     "turnaroundTime": "Same day",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "Testosterone Level",
+        "key": "testosterone_level",
+        "type": "number",
+        "unit": "ng/dL",
+        "normalRange": "300-1,000"
+      }
+    ]
   },
   {
     "id": "PAP001",
@@ -277,7 +599,16 @@
     "description": "Screens for cervical cancer and abnormalities",
     "preparation": "No intercourse or feminine products for 48 hours before test",
     "turnaroundTime": "1-2 weeks",
-    "sampleRequired": "Cervical cell sample"
+    "sampleRequired": "Cervical cell sample",
+    "fields": [
+      {
+        "name": "Result",
+        "key": "result",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "EEG001",
@@ -287,7 +618,16 @@
     "description": "Records electrical activity of the brain",
     "preparation": "Clean hair, no hair products, sleep-deprived if required",
     "turnaroundTime": "2-3 days for results",
-    "sampleRequired": "None - External leads placement"
+    "sampleRequired": "None - External leads placement",
+    "fields": [
+      {
+        "name": "Brain Waves",
+        "key": "brain_waves",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Normal"
+      }
+    ]
   },
   {
     "id": "ANA001",
@@ -297,7 +637,16 @@
     "description": "Screens for autoimmune disorders",
     "preparation": "No special preparation required",
     "turnaroundTime": "3-5 days",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "ANA Level",
+        "key": "ana_level",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "DEX001",
@@ -307,7 +656,16 @@
     "description": "Evaluates cortisol production",
     "preparation": "Take dexamethasone as prescribed, collect morning sample",
     "turnaroundTime": "Same day",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "Cortisol Level",
+        "key": "cortisol_level",
+        "type": "number",
+        "unit": "mcg/dL",
+        "normalRange": "<5"
+      }
+    ]
   },
   {
     "id": "GGT001",
@@ -317,7 +675,16 @@
     "description": "Measures GGT enzyme levels for liver function",
     "preparation": "8 hours fasting required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "GGT Level",
+        "key": "ggt_level",
+        "type": "number",
+        "unit": "U/L",
+        "normalRange": "9-48"
+      }
+    ]
   },
   {
     "id": "BAR001",
@@ -327,7 +694,8 @@
     "description": "X-ray imaging of upper digestive tract",
     "preparation": "Nothing to eat or drink for 8 hours before test",
     "turnaroundTime": "Immediate results",
-    "sampleRequired": "None - Imaging procedure"
+    "sampleRequired": "None - Imaging procedure",
+    "fields": []
   },
   {
     "id": "TRO001",
@@ -337,7 +705,16 @@
     "description": "Checks for heart muscle damage",
     "preparation": "No special preparation required",
     "turnaroundTime": "1-2 hours",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "Troponin Level",
+        "key": "troponin_level",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "<0.04"
+      }
+    ]
   },
   {
     "id": "AMH001",
@@ -347,7 +724,16 @@
     "description": "Assesses ovarian reserve",
     "preparation": "No special preparation required",
     "turnaroundTime": "3-5 days",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "AMH Level",
+        "key": "amh_level",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "1.0-4.0"
+      }
+    ]
   },
   {
     "id": "OCC001",
@@ -357,7 +743,16 @@
     "description": "Checks for hidden blood in stool",
     "preparation": "Dietary restrictions for 3 days before test",
     "turnaroundTime": "1-3 days",
-    "sampleRequired": "Stool sample from 3 different movements"
+    "sampleRequired": "Stool sample from 3 different movements",
+    "fields": [
+      {
+        "name": "Result",
+        "key": "result",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "RBC001",
@@ -367,7 +762,16 @@
     "description": "Measures young red blood cells to assess bone marrow function",
     "preparation": "No special preparation required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "Reticulocyte Count",
+        "key": "reticulocyte_count",
+        "type": "number",
+        "unit": "%",
+        "normalRange": "0.5-2.5"
+      }
+    ]
   },
   {
     "id": "B12001",
@@ -377,7 +781,16 @@
     "description": "Measures vitamin B12 levels to check for deficiency",
     "preparation": "8 hours fasting required",
     "turnaroundTime": "1-2 days",
-    "sampleRequired": "4 mL of blood"
+    "sampleRequired": "4 mL of blood",
+    "fields": [
+      {
+        "name": "Vitamin B12 Level",
+        "key": "vitamin_b12_level",
+        "type": "number",
+        "unit": "pg/mL",
+        "normalRange": "200-900"
+      }
+    ]
   },
   {
     "id": "RF001",
@@ -387,7 +800,16 @@
     "description": "Tests for autoantibodies associated with rheumatoid arthritis",
     "preparation": "No special preparation required",
     "turnaroundTime": "2-3 days",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "Rheumatoid Factor",
+        "key": "rheumatoid_factor",
+        "type": "number",
+        "unit": "IU/mL",
+        "normalRange": "<14"
+      }
+    ]
   },
   {
     "id": "PRL001",
@@ -397,7 +819,16 @@
     "description": "Measures prolactin hormone levels",
     "preparation": "Morning sample preferred, avoid breast stimulation",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "Prolactin Level",
+        "key": "prolactin_level",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "4.0-23.0"
+      }
+    ]
   },
   {
     "id": "CSF001",
@@ -407,7 +838,30 @@
     "description": "Analyzes cerebrospinal fluid for various conditions",
     "preparation": "Performed during lumbar puncture procedure",
     "turnaroundTime": "24-48 hours",
-    "sampleRequired": "2-3 mL of CSF"
+    "sampleRequired": "2-3 mL of CSF",
+    "fields": [
+      {
+        "name": "White Blood Cells",
+        "key": "csf_wbc",
+        "type": "number",
+        "unit": "cells/mcL",
+        "normalRange": "0-5"
+      },
+      {
+        "name": "Protein",
+        "key": "csf_protein",
+        "type": "number",
+        "unit": "mg/dL",
+        "normalRange": "15-45"
+      },
+      {
+        "name": "Glucose",
+        "key": "csf_glucose",
+        "type": "number",
+        "unit": "mg/dL",
+        "normalRange": "40-70"
+      }
+    ]
   },
   {
     "id": "ESR001",
@@ -417,7 +871,16 @@
     "description": "Measures inflammation level in body",
     "preparation": "No special preparation required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "ESR",
+        "key": "esr",
+        "type": "number",
+        "unit": "mm/hr",
+        "normalRange": "0-20"
+      }
+    ]
   },
   {
     "id": "COL001",
@@ -427,7 +890,16 @@
     "description": "Visual examination of large intestine",
     "preparation": "Bowel preparation protocol for 24-48 hours",
     "turnaroundTime": "Same day for visual results, 3-5 days for biopsies",
-    "sampleRequired": "None - Endoscopic procedure"
+    "sampleRequired": "None - Endoscopic procedure",
+    "fields": [
+      {
+        "name": "Findings",
+        "key": "findings",
+        "type": "text",
+        "unit": "",
+        "normalRange": "N/A"
+      }
+    ]
   },
   {
     "id": "INR001",
@@ -437,7 +909,23 @@
     "description": "Measures blood clotting time",
     "preparation": "No special preparation required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "2-3 mL of blood"
+    "sampleRequired": "2-3 mL of blood",
+    "fields": [
+      {
+        "name": "INR",
+        "key": "inr",
+        "type": "number",
+        "unit": "",
+        "normalRange": "0.8-1.2"
+      },
+      {
+        "name": "Prothrombin Time",
+        "key": "pt_time",
+        "type": "number",
+        "unit": "seconds",
+        "normalRange": "11-13.5"
+      }
+    ]
   },
   {
     "id": "COR001",
@@ -447,7 +935,16 @@
     "description": "Measures stress hormone levels",
     "preparation": "Morning sample required, fasting preferred",
     "turnaroundTime": "Same day",
-    "sampleRequired": "4 mL of blood"
+    "sampleRequired": "4 mL of blood",
+    "fields": [
+      {
+        "name": "Cortisol Level",
+        "key": "cortisol_level",
+        "type": "number",
+        "unit": "mcg/dL",
+        "normalRange": "6-23"
+      }
+    ]
   },
   {
     "id": "BNP001",
@@ -457,7 +954,16 @@
     "description": "Assesses heart failure",
     "preparation": "No special preparation required",
     "turnaroundTime": "2-4 hours",
-    "sampleRequired": "4 mL of blood"
+    "sampleRequired": "4 mL of blood",
+    "fields": [
+      {
+        "name": "BNP Level",
+        "key": "bnp_level",
+        "type": "number",
+        "unit": "pg/mL",
+        "normalRange": "<100"
+      }
+    ]
   },
   {
     "id": "HLA001",
@@ -467,7 +973,16 @@
     "description": "Tests tissue compatibility for transplants",
     "preparation": "No special preparation required",
     "turnaroundTime": "5-7 days",
-    "sampleRequired": "7 mL of blood"
+    "sampleRequired": "7 mL of blood",
+    "fields": [
+      {
+        "name": "HLA Profile",
+        "key": "hla_profile",
+        "type": "text",
+        "unit": "",
+        "normalRange": "N/A"
+      }
+    ]
   },
   {
     "id": "ASO001",
@@ -477,7 +992,16 @@
     "description": "Detects recent streptococcal infection",
     "preparation": "No special preparation required",
     "turnaroundTime": "1-2 days",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "ASO Titer",
+        "key": "aso_titer",
+        "type": "number",
+        "unit": "IU/mL",
+        "normalRange": "<200"
+      }
+    ]
   },
   {
     "id": "AMY001",
@@ -487,7 +1011,16 @@
     "description": "Checks pancreatic function",
     "preparation": "8 hours fasting required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "Amylase Level",
+        "key": "amylase_level",
+        "type": "number",
+        "unit": "U/L",
+        "normalRange": "30-110"
+      }
+    ]
   },
   {
     "id": "BAL001",
@@ -497,7 +1030,16 @@
     "description": "Assesses balance and coordination",
     "preparation": "Wear comfortable clothing and shoes",
     "turnaroundTime": "Immediate",
-    "sampleRequired": "None - Physical test"
+    "sampleRequired": "None - Physical test",
+    "fields": [
+      {
+        "name": "Balance Assessment",
+        "key": "balance_assessment",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Normal"
+      }
+    ]
   },
   {
     "id": "AFP001",
@@ -507,7 +1049,16 @@
     "description": "Screens for liver cancer and fetal abnormalities",
     "preparation": "No special preparation required",
     "turnaroundTime": "2-3 days",
-    "sampleRequired": "4 mL of blood"
+    "sampleRequired": "4 mL of blood",
+    "fields": [
+      {
+        "name": "AFP Level",
+        "key": "afp_level",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "0-10"
+      }
+    ]
   },
   {
     "id": "PFT001",
@@ -517,7 +1068,30 @@
     "description": "Comprehensive lung function assessment",
     "preparation": "No smoking or exercise for 4 hours before test",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Breathing test"
+    "sampleRequired": "None - Breathing test",
+    "fields": [
+      {
+        "name": "FVC",
+        "key": "fvc",
+        "type": "number",
+        "unit": "L",
+        "normalRange": "Varies"
+      },
+      {
+        "name": "FEV1",
+        "key": "fev1",
+        "type": "number",
+        "unit": "L",
+        "normalRange": "Varies"
+      },
+      {
+        "name": "FEV1/FVC Ratio",
+        "key": "fev1_fvc_ratio",
+        "type": "number",
+        "unit": "%",
+        "normalRange": "80-90"
+      }
+    ]
   },
   {
     "id": "SEP001",
@@ -527,7 +1101,30 @@
     "description": "Evaluates male fertility parameters",
     "preparation": "2-5 days of abstinence required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "2-5 mL of semen"
+    "sampleRequired": "2-5 mL of semen",
+    "fields": [
+      {
+        "name": "Sperm Count",
+        "key": "sperm_count",
+        "type": "number",
+        "unit": "million/mL",
+        "normalRange": ">15"
+      },
+      {
+        "name": "Motility",
+        "key": "motility",
+        "type": "number",
+        "unit": "%",
+        "normalRange": ">40"
+      },
+      {
+        "name": "Morphology",
+        "key": "morphology",
+        "type": "number",
+        "unit": "%",
+        "normalRange": ">4"
+      }
+    ]
   },
   {
     "id": "DNA001",
@@ -537,7 +1134,23 @@
     "description": "Screens for hereditary breast and ovarian cancer genes",
     "preparation": "Genetic counseling required before testing",
     "turnaroundTime": "2-3 weeks",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "BRCA1 Mutation",
+        "key": "brca1",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      },
+      {
+        "name": "BRCA2 Mutation",
+        "key": "brca2",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "GAL001",
@@ -547,7 +1160,16 @@
     "description": "Tests newborns for galactose metabolism disorders",
     "preparation": "No special preparation required",
     "turnaroundTime": "3-5 days",
-    "sampleRequired": "Few drops of blood"
+    "sampleRequired": "Few drops of blood",
+    "fields": [
+      {
+        "name": "GALT Activity",
+        "key": "galt_activity",
+        "type": "number",
+        "unit": "U/g Hb",
+        "normalRange": "18-28"
+      }
+    ]
   },
   {
     "id": "SWE001",
@@ -557,7 +1179,16 @@
     "description": "Diagnoses cystic fibrosis",
     "preparation": "No lotions or creams on test area",
     "turnaroundTime": "Same day",
-    "sampleRequired": "Sweat sample"
+    "sampleRequired": "Sweat sample",
+    "fields": [
+      {
+        "name": "Sweat Chloride",
+        "key": "sweat_chloride",
+        "type": "number",
+        "unit": "mmol/L",
+        "normalRange": "<40 normal, 40-59 borderline, ≥60 CF likely"
+      }
+    ]
   },
   {
     "id": "MON001",
@@ -567,7 +1198,16 @@
     "description": "Screens for infectious mononucleosis",
     "preparation": "No special preparation required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "Result",
+        "key": "result",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "BIO001",
@@ -577,7 +1217,30 @@
     "description": "Measures body fat, muscle mass, and water content",
     "preparation": "No eating or drinking for 4 hours before test",
     "turnaroundTime": "Immediate",
-    "sampleRequired": "None - Physical measurement"
+    "sampleRequired": "None - Physical measurement",
+    "fields": [
+      {
+        "name": "Body Fat Percentage",
+        "key": "body_fat_percentage",
+        "type": "number",
+        "unit": "%",
+        "normalRange": "10-20"
+      },
+      {
+        "name": "Muscle Mass",
+        "key": "muscle_mass",
+        "type": "number",
+        "unit": "kg",
+        "normalRange": "Varies"
+      },
+      {
+        "name": "Water Content",
+        "key": "water_content",
+        "type": "number",
+        "unit": "%",
+        "normalRange": "50-60"
+      }
+    ]
   },
   {
     "id": "LEP001",
@@ -587,7 +1250,16 @@
     "description": "Measures hormone that regulates appetite",
     "preparation": "8-12 hours fasting required",
     "turnaroundTime": "3-5 days",
-    "sampleRequired": "4 mL of blood"
+    "sampleRequired": "4 mL of blood",
+    "fields": [
+      {
+        "name": "Leptin Level",
+        "key": "leptin_level",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "1-20"
+      }
+    ]
   },
   {
     "id": "TRI001",
@@ -597,7 +1269,30 @@
     "description": "Screens for fetal abnormalities during pregnancy",
     "preparation": "No special preparation required",
     "turnaroundTime": "5-7 days",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "Alpha-fetoprotein (AFP)",
+        "key": "afp",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "Varies"
+      },
+      {
+        "name": "Human Chorionic Gonadotropin (hCG)",
+        "key": "hcg",
+        "type": "number",
+        "unit": "mIU/mL",
+        "normalRange": "Varies"
+      },
+      {
+        "name": "Estriol",
+        "key": "estriol",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "Varies"
+      }
+    ]
   },
   {
     "id": "SAL001",
@@ -607,7 +1302,37 @@
     "description": "Measures stress hormone levels throughout the day",
     "preparation": "No eating or drinking 30 minutes before collection",
     "turnaroundTime": "3-5 days",
-    "sampleRequired": "4 saliva samples"
+    "sampleRequired": "4 saliva samples",
+    "fields": [
+      {
+        "name": "Morning Cortisol",
+        "key": "morning_cortisol",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "3.7-9.5"
+      },
+      {
+        "name": "Noon Cortisol",
+        "key": "noon_cortisol",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "1.2-3.0"
+      },
+      {
+        "name": "Evening Cortisol",
+        "key": "evening_cortisol",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "0.6-1.9"
+      },
+      {
+        "name": "Night Cortisol",
+        "key": "night_cortisol",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "0.4-1.0"
+      }
+    ]
   },
   {
     "id": "KAR001",
@@ -617,7 +1342,23 @@
     "description": "Examines chromosome structure and number",
     "preparation": "No special preparation required",
     "turnaroundTime": "10-14 days",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "Chromosome Count",
+        "key": "chromosome_count",
+        "type": "number",
+        "unit": "",
+        "normalRange": "46"
+      },
+      {
+        "name": "Chromosome Structure",
+        "key": "chromosome_structure",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Normal"
+      }
+    ]
   },
   {
     "id": "BAE001",
@@ -627,7 +1368,8 @@
     "description": "X-ray examination of lower digestive tract",
     "preparation": "Bowel preparation required day before",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Imaging procedure"
+    "sampleRequired": "None - Imaging procedure",
+    "fields": []
   },
   {
     "id": "MET001",
@@ -637,7 +1379,107 @@
     "description": "Comprehensive assessment of metabolism",
     "preparation": "8-12 hours fasting required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "Glucose",
+        "key": "glucose",
+        "type": "number",
+        "unit": "mg/dL",
+        "normalRange": "70-99"
+      },
+      {
+        "name": "Calcium",
+        "key": "calcium",
+        "type": "number",
+        "unit": "mg/dL",
+        "normalRange": "8.5-10.2"
+      },
+      {
+        "name": "Sodium",
+        "key": "sodium",
+        "type": "number",
+        "unit": "mEq/L",
+        "normalRange": "135-145"
+      },
+      {
+        "name": "Potassium",
+        "key": "potassium",
+        "type": "number",
+        "unit": "mEq/L",
+        "normalRange": "3.5-5.0"
+      },
+      {
+        "name": "Chloride",
+        "key": "chloride",
+        "type": "number",
+        "unit": "mEq/L",
+        "normalRange": "96-106"
+      },
+      {
+        "name": "Bicarbonate",
+        "key": "bicarbonate",
+        "type": "number",
+        "unit": "mEq/L",
+        "normalRange": "23-29"
+      },
+      {
+        "name": "Blood Urea Nitrogen (BUN)",
+        "key": "bun",
+        "type": "number",
+        "unit": "mg/dL",
+        "normalRange": "7-20"
+      },
+      {
+        "name": "Creatinine",
+        "key": "creatinine",
+        "type": "number",
+        "unit": "mg/dL",
+        "normalRange": "0.6-1.3"
+      },
+      {
+        "name": "Albumin",
+        "key": "albumin",
+        "type": "number",
+        "unit": "g/dL",
+        "normalRange": "3.5-5.0"
+      },
+      {
+        "name": "Total Protein",
+        "key": "total_protein",
+        "type": "number",
+        "unit": "g/dL",
+        "normalRange": "6.0-8.3"
+      },
+      {
+        "name": "Alkaline Phosphatase (ALP)",
+        "key": "alp",
+        "type": "number",
+        "unit": "U/L",
+        "normalRange": "44-147"
+      },
+      {
+        "name": "Alanine Aminotransferase (ALT)",
+        "key": "alt",
+        "type": "number",
+        "unit": "U/L",
+        "normalRange": "7-56"
+      },
+      {
+        "name": "Aspartate Aminotransferase (AST)",
+        "key": "ast",
+        "type": "number",
+        "unit": "U/L",
+        "normalRange": "10-40"
+      },
+      {
+        "name": "Bilirubin",
+        "key": "bilirubin",
+        "type": "number",
+        "unit": "mg/dL",
+        "normalRange": "0.1-1.2"
+      }
+    ]
   },
   {
     "id": "SCL001",
@@ -647,7 +1489,23 @@
     "description": "Tests for autoimmune markers of scleroderma",
     "preparation": "No special preparation required",
     "turnaroundTime": "5-7 days",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "Anti-Scl-70 Antibodies",
+        "key": "anti_scl_70",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      },
+      {
+        "name": "Anti-Centromere Antibodies",
+        "key": "anti_centromere",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "VNG001",
@@ -657,7 +1515,16 @@
     "description": "Tests inner ear and motor functions",
     "preparation": "No medications that affect balance",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Recording procedure"
+    "sampleRequired": "None - Recording procedure",
+    "fields": [
+      {
+        "name": "Nystagmus",
+        "key": "nystagmus",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Normal"
+      }
+    ]
   },
   {
     "id": "ZIN001",
@@ -667,7 +1534,16 @@
     "description": "Measures zinc levels in blood",
     "preparation": "Fasting preferred",
     "turnaroundTime": "3-5 days",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "Zinc Level",
+        "key": "zinc_level",
+        "type": "number",
+        "unit": "mcg/dL",
+        "normalRange": "70-120"
+      }
+    ]
   },
   {
     "id": "PCA001",
@@ -677,7 +1553,16 @@
     "description": "Helps diagnose bacterial sepsis",
     "preparation": "No special preparation required",
     "turnaroundTime": "2-4 hours",
-    "sampleRequired": "4 mL of blood"
+    "sampleRequired": "4 mL of blood",
+    "fields": [
+      {
+        "name": "Procalcitonin Level",
+        "key": "procalcitonin_level",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "<0.5"
+      }
+    ]
   },
   {
     "id": "TNF001",
@@ -687,7 +1572,16 @@
     "description": "Measures inflammatory cytokine levels",
     "preparation": "No special preparation required",
     "turnaroundTime": "3-5 days",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "TNF Level",
+        "key": "tnf_level",
+        "type": "number",
+        "unit": "pg/mL",
+        "normalRange": "<8.1"
+      }
+    ]
   },
   {
     "id": "MSU001",
@@ -697,7 +1591,8 @@
     "description": "Images muscles, tendons, and ligaments",
     "preparation": "Wear loose clothing",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Imaging procedure"
+    "sampleRequired": "None - Imaging procedure",
+    "fields": []
   },
   {
     "id": "CYS001",
@@ -707,7 +1602,8 @@
     "description": "Examines bladder and urinary tract",
     "preparation": "Urine sample for testing before procedure",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Endoscopic procedure"
+    "sampleRequired": "None - Endoscopic procedure",
+    "fields": []
   },
   {
     "id": "EOS001",
@@ -717,7 +1613,16 @@
     "description": "Measures specific white blood cells",
     "preparation": "No special preparation required",
     "turnaroundTime": "Same day",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "Eosinophils",
+        "key": "eosinophils",
+        "type": "number",
+        "unit": "cells/mcL",
+        "normalRange": "0-500"
+      }
+    ]
   },
   {
     "id": "GHR001",
@@ -727,7 +1632,16 @@
     "description": "Measures growth hormone levels",
     "preparation": "Fasting and rest required",
     "turnaroundTime": "2-3 days",
-    "sampleRequired": "4 mL of blood"
+    "sampleRequired": "4 mL of blood",
+    "fields": [
+      {
+        "name": "Growth Hormone Level",
+        "key": "growth_hormone_level",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "0.4-10"
+      }
+    ]
   },
   {
     "id": "TOX001",
@@ -737,7 +1651,30 @@
     "description": "Tests for lead, mercury, arsenic, and other heavy metals",
     "preparation": "No seafood for 3 days before test",
     "turnaroundTime": "5-7 days",
-    "sampleRequired": "6 mL of blood"
+    "sampleRequired": "6 mL of blood",
+    "fields": [
+      {
+        "name": "Lead",
+        "key": "lead",
+        "type": "number",
+        "unit": "mcg/dL",
+        "normalRange": "<5"
+      },
+      {
+        "name": "Mercury",
+        "key": "mercury",
+        "type": "number",
+        "unit": "mcg/L",
+        "normalRange": "<10"
+      },
+      {
+        "name": "Arsenic",
+        "key": "arsenic",
+        "type": "number",
+        "unit": "mcg/L",
+        "normalRange": "<10"
+      }
+    ]
   },
   {
     "id": "CAR001",
@@ -747,7 +1684,16 @@
     "description": "CT scan to detect calcium in coronary arteries",
     "preparation": "No caffeine 4 hours before test",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Imaging procedure"
+    "sampleRequired": "None - Imaging procedure",
+    "fields": [
+      {
+        "name": "Calcium Score",
+        "key": "calcium_score",
+        "type": "number",
+        "unit": "",
+        "normalRange": "0-100"
+      }
+    ]
   },
   {
     "id": "CF001",
@@ -757,7 +1703,16 @@
     "description": "Comprehensive genetic testing for CF mutations",
     "preparation": "Genetic counseling recommended",
     "turnaroundTime": "2-3 weeks",
-    "sampleRequired": "5 mL of blood"
+    "sampleRequired": "5 mL of blood",
+    "fields": [
+      {
+        "name": "CFTR Mutation",
+        "key": "cftr_mutation",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "DXA001",
@@ -767,7 +1722,16 @@
     "description": "Measures bone density",
     "preparation": "No calcium supplements 24 hours before",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Imaging procedure"
+    "sampleRequired": "None - Imaging procedure",
+    "fields": [
+      {
+        "name": "Bone Density",
+        "key": "bone_density",
+        "type": "number",
+        "unit": "g/cm²",
+        "normalRange": "Varies by age and sex"
+      }
+    ]
   },
   {
     "id": "VOC001",
@@ -777,7 +1741,16 @@
     "description": "Measures maximum oxygen consumption during exercise",
     "preparation": "No strenuous exercise 24 hours before",
     "turnaroundTime": "Immediate",
-    "sampleRequired": "None - Physical test"
+    "sampleRequired": "None - Physical test",
+    "fields": [
+      {
+        "name": "VO2 Max",
+        "key": "vo2_max",
+        "type": "number",
+        "unit": "mL/kg/min",
+        "normalRange": "Varies by age and sex"
+      }
+    ]
   },
   {
     "id": "NEU001",
@@ -787,7 +1760,16 @@
     "description": "Evaluates cognitive function and behavior",
     "preparation": "Well-rested, bring glasses if needed",
     "turnaroundTime": "5-7 days",
-    "sampleRequired": "None - Cognitive test"
+    "sampleRequired": "None - Cognitive test",
+    "fields": [
+      {
+        "name": "Cognitive Function",
+        "key": "cognitive_function",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Normal"
+      }
+    ]
   },
   {
     "id": "MIC001",
@@ -797,7 +1779,16 @@
     "description": "Detects early kidney damage",
     "preparation": "First morning sample preferred",
     "turnaroundTime": "1-2 days",
-    "sampleRequired": "10 mL of urine"
+    "sampleRequired": "10 mL of urine",
+    "fields": [
+      {
+        "name": "Microalbumin Level",
+        "key": "microalbumin_level",
+        "type": "number",
+        "unit": "mg/L",
+        "normalRange": "<30"
+      }
+    ]
   },
   {
     "id": "HIS001",
@@ -807,7 +1798,16 @@
     "description": "Measures histamine levels for allergy evaluation",
     "preparation": "Fasting required",
     "turnaroundTime": "3-5 days",
-    "sampleRequired": "4 mL of blood"
+    "sampleRequired": "4 mL of blood",
+    "fields": [
+      {
+        "name": "Histamine Level",
+        "key": "histamine_level",
+        "type": "number",
+        "unit": "ng/mL",
+        "normalRange": "0-10"
+      }
+    ]
   },
   {
     "id": "OTO001",
@@ -817,7 +1817,16 @@
     "description": "Tests function of inner ear",
     "preparation": "Quiet environment needed",
     "turnaroundTime": "Immediate",
-    "sampleRequired": "None - Hearing test"
+    "sampleRequired": "None - Hearing test",
+    "fields": [
+      {
+        "name": "Otoacoustic Emissions",
+        "key": "otoacoustic_emissions",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Present"
+      }
+    ]
   },
   {
     "id": "CHL001",
@@ -827,7 +1836,16 @@
     "description": "Tests for chlamydia infection",
     "preparation": "No urination for 2 hours before",
     "turnaroundTime": "1-3 days",
-    "sampleRequired": "20 mL of urine"
+    "sampleRequired": "20 mL of urine",
+    "fields": [
+      {
+        "name": "Chlamydia Result",
+        "key": "chlamydia_result",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "PNE001",
@@ -837,7 +1855,16 @@
     "description": "Identifies bacteria causing pneumonia",
     "preparation": "Morning sample preferred",
     "turnaroundTime": "2-3 days",
-    "sampleRequired": "Sputum sample"
+    "sampleRequired": "Sputum sample",
+    "fields": [
+      {
+        "name": "Bacterial Identification",
+        "key": "bacterial_identification",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "CCA001",
@@ -847,7 +1874,16 @@
     "description": "Detects cancer cells in bloodstream",
     "preparation": "No special preparation required",
     "turnaroundTime": "7-10 days",
-    "sampleRequired": "7 mL of blood"
+    "sampleRequired": "7 mL of blood",
+    "fields": [
+      {
+        "name": "Cancer Cells",
+        "key": "cancer_cells",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "ERG001",
@@ -857,7 +1893,16 @@
     "description": "Evaluates physical work capacity",
     "preparation": "Wear comfortable clothing",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Physical test"
+    "sampleRequired": "None - Physical test",
+    "fields": [
+      {
+        "name": "Work Capacity",
+        "key": "work_capacity",
+        "type": "number",
+        "unit": "W",
+        "normalRange": "Varies by age and sex"
+      }
+    ]
   },
   {
     "id": "MLD001",
@@ -867,7 +1912,16 @@
     "description": "Tests for allergies to common molds",
     "preparation": "No antihistamines for 7 days",
     "turnaroundTime": "3-5 days",
-    "sampleRequired": "4 mL of blood"
+    "sampleRequired": "4 mL of blood",
+    "fields": [
+      {
+        "name": "IgE Level",
+        "key": "ige_level",
+        "type": "number",
+        "unit": "kU/L",
+        "normalRange": "<0.35"
+      }
+    ]
   },
   {
     "id": "BIA001",
@@ -877,7 +1931,30 @@
     "description": "Measures body composition",
     "preparation": "No eating/drinking 4 hours before",
     "turnaroundTime": "Immediate",
-    "sampleRequired": "None - Physical test"
+    "sampleRequired": "None - Physical test",
+    "fields": [
+      {
+        "name": "Body Fat Percentage",
+        "key": "body_fat_percentage",
+        "type": "number",
+        "unit": "%",
+        "normalRange": "10-20"
+      },
+      {
+        "name": "Muscle Mass",
+        "key": "muscle_mass",
+        "type": "number",
+        "unit": "kg",
+        "normalRange": "Varies"
+      },
+      {
+        "name": "Water Content",
+        "key": "water_content",
+        "type": "number",
+        "unit": "%",
+        "normalRange": "50-60"
+      }
+    ]
   },
   {
     "id": "TPO001",
@@ -887,7 +1964,16 @@
     "description": "Tests for thyroid autoimmune disorder",
     "preparation": "No special preparation required",
     "turnaroundTime": "2-3 days",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "TPO Antibody Level",
+        "key": "tpo_antibody_level",
+        "type": "number",
+        "unit": "IU/mL",
+        "normalRange": "<35"
+      }
+    ]
   },
   {
     "id": "SNP001",
@@ -897,7 +1983,30 @@
     "description": "Evaluates sleep patterns and disorders",
     "preparation": "Follow normal sleep routine",
     "turnaroundTime": "7-10 days",
-    "sampleRequired": "None - Overnight monitoring"
+    "sampleRequired": "None - Overnight monitoring",
+    "fields": [
+      {
+        "name": "Sleep Efficiency",
+        "key": "sleep_efficiency",
+        "type": "number",
+        "unit": "%",
+        "normalRange": "85-95"
+      },
+      {
+        "name": "Apnea-Hypopnea Index",
+        "key": "ahi",
+        "type": "number",
+        "unit": "events/hour",
+        "normalRange": "<5"
+      },
+      {
+        "name": "Total Sleep Time",
+        "key": "total_sleep_time",
+        "type": "number",
+        "unit": "minutes",
+        "normalRange": "420-540"
+      }
+    ]
   },
   {
     "id": "VMA001",
@@ -907,7 +2016,16 @@
     "description": "Screens for pheochromocytoma",
     "preparation": "Dietary restrictions for 3 days",
     "turnaroundTime": "5-7 days",
-    "sampleRequired": "24-hour urine collection"
+    "sampleRequired": "24-hour urine collection",
+    "fields": [
+      {
+        "name": "VMA Level",
+        "key": "vma_level",
+        "type": "number",
+        "unit": "mg/24h",
+        "normalRange": "2-7"
+      }
+    ]
   },
   {
     "id": "TLR001",
@@ -917,7 +2035,23 @@
     "description": "Evaluates causes of fainting",
     "preparation": "No eating 4 hours before",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Physical test"
+    "sampleRequired": "None - Physical test",
+    "fields": [
+      {
+        "name": "Heart Rate",
+        "key": "heart_rate",
+        "type": "number",
+        "unit": "bpm",
+        "normalRange": "60-100"
+      },
+      {
+        "name": "Blood Pressure",
+        "key": "blood_pressure",
+        "type": "text",
+        "unit": "mmHg",
+        "normalRange": "120/80"
+      }
+    ]
   },
   {
     "id": "MTB001",
@@ -927,7 +2061,16 @@
     "description": "Measures resting energy expenditure",
     "preparation": "12 hours fasting, no exercise",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Breathing test"
+    "sampleRequired": "None - Breathing test",
+    "fields": [
+      {
+        "name": "Resting Metabolic Rate",
+        "key": "resting_metabolic_rate",
+        "type": "number",
+        "unit": "kcal/day",
+        "normalRange": "Varies"
+      }
+    ]
   },
   {
     "id": "GAI001",
@@ -937,7 +2080,23 @@
     "description": "Evaluates walking pattern",
     "preparation": "Wear comfortable shoes",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Physical test"
+    "sampleRequired": "None - Physical test",
+    "fields": [
+      {
+        "name": "Stride Length",
+        "key": "stride_length",
+        "type": "number",
+        "unit": "cm",
+        "normalRange": "Varies"
+      },
+      {
+        "name": "Gait Speed",
+        "key": "gait_speed",
+        "type": "number",
+        "unit": "m/s",
+        "normalRange": "1.2-1.4"
+      }
+    ]
   },
   {
     "id": "CRP002",
@@ -947,7 +2106,16 @@
     "description": "Tests for fungal infection",
     "preparation": "No special preparation required",
     "turnaroundTime": "1-2 days",
-    "sampleRequired": "3 mL of blood"
+    "sampleRequired": "3 mL of blood",
+    "fields": [
+      {
+        "name": "Cryptococcal Antigen Level",
+        "key": "cryptococcal_antigen_level",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Negative"
+      }
+    ]
   },
   {
     "id": "ADA001",
@@ -957,7 +2125,16 @@
     "description": "Helps diagnose tuberculosis",
     "preparation": "No special preparation required",
     "turnaroundTime": "3-5 days",
-    "sampleRequired": "4 mL of blood"
+    "sampleRequired": "4 mL of blood",
+    "fields": [
+      {
+        "name": "ADA Level",
+        "key": "ada_level",
+        "type": "number",
+        "unit": "U/L",
+        "normalRange": "<40"
+      }
+    ]
   },
   {
     "id": "THR001",
@@ -967,7 +2144,23 @@
     "description": "Evaluates blood clotting dynamics",
     "preparation": "No blood thinners for 24 hours",
     "turnaroundTime": "Same day",
-    "sampleRequired": "4 mL of blood"
+    "sampleRequired": "4 mL of blood",
+    "fields": [
+      {
+        "name": "Clotting Time",
+        "key": "clotting_time",
+        "type": "number",
+        "unit": "minutes",
+        "normalRange": "5-10"
+      },
+      {
+        "name": "Clot Strength",
+        "key": "clot_strength",
+        "type": "number",
+        "unit": "mm",
+        "normalRange": "50-70"
+      }
+    ]
   },
   {
     "id": "NCV001",
@@ -977,7 +2170,16 @@
     "description": "Measures nerve signal transmission speed",
     "preparation": "No lotions on test areas",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Physical test"
+    "sampleRequired": "None - Physical test",
+    "fields": [
+      {
+        "name": "Conduction Velocity",
+        "key": "conduction_velocity",
+        "type": "number",
+        "unit": "m/s",
+        "normalRange": "50-60"
+      }
+    ]
   },
   {
     "id": "CEC001",
@@ -987,6 +2189,15 @@
     "description": "Evaluates inner ear function",
     "preparation": "No food for 3 hours before",
     "turnaroundTime": "Same day",
-    "sampleRequired": "None - Physical test"
+    "sampleRequired": "None - Physical test",
+    "fields": [
+      {
+        "name": "Nystagmus Response",
+        "key": "nystagmus_response",
+        "type": "text",
+        "unit": "",
+        "normalRange": "Normal"
+      }
+    ]
   }
 ]
