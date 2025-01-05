@@ -10,7 +10,6 @@ export default function DashboardPage() {
     try {
       const response = await fetch("http://127.0.0.1:8000/api/getPatients/");
       const data = await response.json();
-      console.log(data);
       setPatients(data.patients);
     } catch (error) {
       console.log(error);
