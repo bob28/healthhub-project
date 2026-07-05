@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   MdDashboard,
-  MdLogout,
   MdCalendarMonth,
   MdLocationOn,
   MdOutlineClose,
@@ -13,6 +13,8 @@ import { IoMdDocument } from "react-icons/io";
 import logo from "../../public/healthhub-secondary.png";
 import { FiLogOut, FiMenu } from "react-icons/fi";
 import { Image, Divider, Button } from "@mantine/core";
+
+import { useAuth } from "@/src/context/auth-context";
 
 const patientLinks = [
   { link: "/app/dashboard", label: "Dashboard", icon: MdDashboard },
@@ -38,10 +40,19 @@ const providerLinks = [
 
 export function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isPatient, setIsPatient] = useState(true);
+  const { user, logout } = useAuth();
+  const router = useRouter();
+
+  // Patients and clinical staff see different navigation.
+  const isPatient = user?.role === "patient";
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleLogout = async () => {
+    await logout();
+    router.replace("/login");
   };
 
   return (
@@ -130,15 +141,18 @@ export function Sidebar() {
                   </span>
                 </a>
 
-                <a
-                  href="#"
-                  className={`flex items-center p-2 text-secondary font-semibold rounded-lg hover:bg-secondary group ${
-                    isPatient ? "hover:text-primary" : "hover:text-accent"
-                  }`}
+                <Button
+                  variant="subtle"
+                  color="secondary"
+                  fullWidth
+                  justify="flex-start"
+                  radius="lg"
+                  onClick={handleLogout}
+                  leftSection={<FiLogOut className="w-6 h-6" />}
+                  classNames={{ label: "font-semibold" }}
                 >
-                  <FiLogOut className="flex-shrink-0 w-7 h-7 transition duration-75" />
-                  <span className="flex-1 ms-3 whitespace-nowrap">Logout</span>
-                </a>
+                  Logout
+                </Button>
               </div>
             </div>
           </div>

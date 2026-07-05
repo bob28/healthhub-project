@@ -1,0 +1,21 @@
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = ["test_*.py", "tests.py"]
+# Only treat classes ending in "Tests" as test classes so Django models named
+# TestOrder / TestResult / TestAnalyte are not mistaken for test suites.
+python_classes = ["*Tests"]
+addopts = "--strict-markers"
+filterwarnings = ["ignore:No directory at:UserWarning"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+exclude = ["migrations", ".venv", "env"]
+
+[tool.ruff.lint]
+# pycodestyle (E), pyflakes (F), isort (I), bugbear (B), pyupgrade (UP)
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.coverage.run]
+source = ["apps", "config"]
+omit = ["*/migrations/*", "*/tests/*", "manage.py", "*/wsgi.py", "*/asgi.py"]

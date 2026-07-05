@@ -11,6 +11,7 @@ import {
   mantineHtmlProps,
   createTheme,
 } from "@mantine/core";
+import { AuthProvider } from "@/src/context/auth-context";
 
 const theme = createTheme({
   colors: {
@@ -69,7 +70,9 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme}>
+          <AuthProvider>{children}</AuthProvider>
+        </MantineProvider>
       </body>
     </html>
   );
