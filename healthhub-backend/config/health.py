@@ -1,6 +1,7 @@
 """Liveness/readiness endpoint used by uptime monitors and keep-alive pings."""
 
 from django.db import connection
+from drf_spectacular.types import OpenApiTypes
 from drf_spectacular.utils import extend_schema
 from rest_framework.decorators import (
     api_view,
@@ -15,6 +16,7 @@ from rest_framework.response import Response
     summary="Health check",
     description="Reports service and database availability. Public.",
     auth=[],
+    responses={200: OpenApiTypes.OBJECT, 503: OpenApiTypes.OBJECT},
 )
 @api_view(["GET"])
 @authentication_classes([])

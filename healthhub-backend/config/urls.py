@@ -16,7 +16,10 @@ from .health import health_check
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/health/", health_check, name="health"),
-    path("api/auth/", include("apps.accounts.api.urls")),
+    path("api/", include("apps.accounts.api.urls")),
+    path("api/", include("apps.directory.api.urls")),
+    path("api/", include("apps.scheduling.api.urls")),
+    path("api/", include("apps.lab.api.urls")),
     # OpenAPI schema + interactive docs
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path(

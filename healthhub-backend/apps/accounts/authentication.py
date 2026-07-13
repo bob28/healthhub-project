@@ -8,6 +8,7 @@ only accepting JSON (see ``config.settings``).
 """
 
 from django.conf import settings
+from drf_spectacular.extensions import OpenApiAuthenticationExtension
 from rest_framework_simplejwt.authentication import JWTAuthentication
 
 
@@ -44,3 +45,24 @@ class CookieJWTAuthentication(JWTAuthentication):
 
         validated_token = self.get_validated_token(raw_token)
         return self.get_user(validated_token), validated_token
+
+
+class CookieJWTAuthenticationScheme(OpenApiAuthenticationExtension):
+    """Teach drf-spectacular to document the cookie-based JWT auth.
+
+    Without this, the generated OpenAPI schema can't describe how requests are
+    authenticated (it only understands header schemes out of the box). This
+    registers the access-token cookie as an ``apiKey`` security scheme so the
+    Swagger docs are accurate.
+    """
+
+    target_class = "apps.accounts.authentication.CookieJWTAuthentication"
+    name = "cookieAuth"
+
+    def get_security_definition(self, auto_schema):
+        """Describe the auth as the httpOnly access-token cookie."""
+        return {
+            "type": "apiKey",
+            "in": "cookie",
+            "name": settings.JWT_ACCESS_COOKIE,
+        }

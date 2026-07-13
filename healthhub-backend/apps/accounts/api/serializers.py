@@ -1,4 +1,6 @@
 from django.contrib.auth.password_validation import validate_password
+from drf_spectacular.types import OpenApiTypes
+from drf_spectacular.utils import extend_schema_field
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
@@ -59,6 +61,7 @@ class UserSerializer(serializers.ModelSerializer):
             "profile",
         ]
 
+    @extend_schema_field(OpenApiTypes.OBJECT)
     def get_profile(self, user):
         """Return the role-appropriate nested profile, or ``None``.
 
@@ -74,6 +77,39 @@ class UserSerializer(serializers.ModelSerializer):
         if user.is_clinical_staff and hasattr(user, "staff_profile"):
             return StaffProfileSerializer(user.staff_profile).data
         return None
+
+
+class PatientListSerializer(serializers.ModelSerializer):
+    """Compact patient serializer for the staff-facing patient directory.
+
+    Flattens the key patient-profile fields (MRN, DOB, sex) onto the user so
+    staff can search for and identify a patient in one payload.
+    """
+
+    full_name = serializers.CharField(source="get_full_name", read_only=True)
+    mrn = serializers.CharField(
+        source="patient_profile.mrn", read_only=True, default=None
+    )
+    date_of_birth = serializers.DateField(
+        source="patient_profile.date_of_birth", read_only=True, default=None
+    )
+    sex = serializers.CharField(
+        source="patient_profile.sex", read_only=True, default=None
+    )
+
+    class Meta:
+        model = User
+        fields = [
+            "id",
+            "email",
+            "first_name",
+            "last_name",
+            "full_name",
+            "phone",
+            "mrn",
+            "date_of_birth",
+            "sex",
+        ]
 
 
 class RegisterSerializer(serializers.ModelSerializer):

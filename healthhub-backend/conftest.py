@@ -3,6 +3,7 @@
 import datetime
 
 import pytest
+from django.core.cache import cache
 from rest_framework.test import APIClient
 
 from apps.accounts.models import PatientProfile, User, UserRole
@@ -17,6 +18,10 @@ def _test_environment(settings):
     requests into 301 redirects; the latter warns when ``collectstatic`` has
     not run. Neither is relevant to the behaviour under test, so disable them.
 
+    Also clears the cache before each test: DRF's rate-limit counters live in
+    the cache, and without a reset the many logins across the suite would trip
+    the ``auth`` throttle and fail later tests.
+
     Args:
         settings: pytest-django's settings-override fixture.
     """
@@ -27,6 +32,7 @@ def _test_environment(settings):
             "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"
         },
     }
+    cache.clear()
 
 
 @pytest.fixture

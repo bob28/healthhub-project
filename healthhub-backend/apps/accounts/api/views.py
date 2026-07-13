@@ -1,14 +1,21 @@
 from django.conf import settings
 from drf_spectacular.utils import extend_schema
-from rest_framework import generics, permissions, status
+from rest_framework import filters, generics, permissions, status, viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.exceptions import InvalidToken
 from rest_framework_simplejwt.serializers import TokenRefreshSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 
+from ..models import User, UserRole
+from ..permissions import IsClinicalStaff
 from .cookies import clear_auth_cookies, set_auth_cookies
-from .serializers import LoginSerializer, RegisterSerializer, UserSerializer
+from .serializers import (
+    LoginSerializer,
+    PatientListSerializer,
+    RegisterSerializer,
+    UserSerializer,
+)
 
 
 class RegisterView(generics.CreateAPIView):
@@ -149,3 +156,25 @@ class MeView(generics.RetrieveAPIView):
     def get_object(self):
         """Return the ``User`` making the request."""
         return self.request.user
+
+
+class PatientViewSet(viewsets.ReadOnlyModelViewSet):
+    """Staff-facing directory of patients (list + retrieve).
+
+    Lets clinical staff find the patient they are booking an appointment or
+    ordering a test for. Supports ``?search=`` across name, email, and MRN.
+    Patients cannot access it (staff-only).
+    """
+
+    serializer_class = PatientListSerializer
+    permission_classes = [permissions.IsAuthenticated, IsClinicalStaff]
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
+    search_fields = ["first_name", "last_name", "email", "patient_profile__mrn"]
+    ordering_fields = ["last_name", "date_joined"]
+    ordering = ["last_name", "first_name"]
+
+    def get_queryset(self):
+        """Return all patient users with their profile prefetched."""
+        return User.objects.filter(role=UserRole.PATIENT).select_related(
+            "patient_profile"
+        )

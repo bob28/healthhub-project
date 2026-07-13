@@ -110,12 +110,16 @@ class TestAnalyte(models.Model):
             or ``""`` when neither bound is set (a qualitative analyte).
         """
         unit = f" {self.unit}".rstrip() if self.unit else ""
-        if self.ref_low is not None and self.ref_high is not None:
-            return f"{self.ref_low:g}–{self.ref_high:g}{unit}"
-        if self.ref_high is not None:
-            return f"< {self.ref_high:g}{unit}"
-        if self.ref_low is not None:
-            return f"> {self.ref_low:g}{unit}"
+        # Format through float so a DB Decimal("12.000") renders as "12", not
+        # "12.000" (an in-memory Decimal("12") already would).
+        low = f"{float(self.ref_low):g}" if self.ref_low is not None else None
+        high = f"{float(self.ref_high):g}" if self.ref_high is not None else None
+        if low is not None and high is not None:
+            return f"{low}–{high}{unit}"
+        if high is not None:
+            return f"< {high}{unit}"
+        if low is not None:
+            return f"> {low}{unit}"
         return ""
 
     def classify(self, value):

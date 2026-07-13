@@ -5,7 +5,11 @@ python_files = ["test_*.py", "tests.py"]
 # TestOrder / TestResult / TestAnalyte are not mistaken for test suites.
 python_classes = ["*Tests"]
 addopts = "--strict-markers"
-filterwarnings = ["ignore:No directory at:UserWarning"]
+filterwarnings = [
+    "ignore:No directory at:UserWarning",
+    # Two DRF routers each register the format-suffix converter; harmless.
+    "ignore:Converter 'drf_format_suffix' is already registered",
+]
 
 [tool.ruff]
 line-length = 88
