@@ -7,7 +7,7 @@
  */
 
 import type { LoginResponse, RegisterPayload, User } from "@/src/types/auth";
-import { apiFetch } from "@/src/services/api-client";
+import { apiFetch } from "@/src/services/apiClient";
 
 export const authService = {
   /** Fetch the currently authenticated user (throws 401 if not logged in). */

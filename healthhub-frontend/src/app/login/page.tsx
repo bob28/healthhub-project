@@ -20,7 +20,12 @@ import dayjs from "dayjs";
 import logoBG from "../../../public/logoBG.png";
 import loginPicture from "../../../public/loginPicture.jpg";
 import { useAuth } from "@/src/context/auth-context";
-import { ApiError } from "@/src/services/api-client";
+import { ApiError } from "@/src/services/apiClient";
+import type { User } from "@/src/types/auth";
+
+/** Where a user lands after auth: staff get the provider area, patients their own. */
+const landingPath = (user: User) =>
+  user.role === "patient" ? "/app/dashboard" : "/app/provider/dashboard";
 
 /** Maps backend (DRF) field names to this form's field names for error display. */
 const FIELD_MAP: Record<string, string> = {
@@ -57,7 +62,7 @@ export default function LoginPage() {
   // If already authenticated, skip the login screen.
   useEffect(() => {
     if (!loading && user) {
-      router.replace("/app/dashboard");
+      router.replace(landingPath(user));
     }
   }, [loading, user, router]);
 
@@ -81,18 +86,17 @@ export default function LoginPage() {
 
     setSubmitting(true);
     try {
-      if (type === "register") {
-        await register({
-          email: form.values.email,
-          password: form.values.password,
-          first_name: form.values.firstName,
-          last_name: form.values.lastName,
-          date_of_birth: dayjs(form.values.dob).format("YYYY-MM-DD"),
-        });
-      } else {
-        await login(form.values.email, form.values.password);
-      }
-      router.push("/app/dashboard");
+      const authed =
+        type === "register"
+          ? await register({
+              email: form.values.email,
+              password: form.values.password,
+              first_name: form.values.firstName,
+              last_name: form.values.lastName,
+              date_of_birth: dayjs(form.values.dob).format("YYYY-MM-DD"),
+            })
+          : await login(form.values.email, form.values.password);
+      router.push(landingPath(authed));
     } catch (err) {
       if (err instanceof ApiError) {
         const fields = err.fieldErrors();

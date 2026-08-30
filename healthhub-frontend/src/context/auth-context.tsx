@@ -16,7 +16,7 @@ import {
   useState,
 } from "react";
 
-import { authService } from "@/src/services/auth-service";
+import { authService } from "@/src/services/auth";
 import type { RegisterPayload, User } from "@/src/types/auth";
 
 interface AuthContextValue {
